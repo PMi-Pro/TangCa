@@ -27,32 +27,30 @@ let data; // Dữ liệu tăng ca
 let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb và cơm khi hiển thị
 
 //========== Sửa dữ liệu trong localStorage từ ver 0.8 (16.11.2023)
-(function fixDataUpdate() {
-  if (localStorage[nam] != null) {
-    localStorage[`TCA-${nam}`] = localStorage[nam];
-    delete localStorage[nam];
-    localStorage['TCA-phienBan'] = localStorage['phienBan'];
-    delete localStorage['phienBan'];
-    localStorage['TCA-coChu'] = localStorage['coChu'];
-    delete localStorage['coChu'];
-    localStorage['TCA-lcb'] = localStorage['lcb'];
-    delete localStorage['lcb'];
-    localStorage['TCA-gtcGanDay'] = localStorage['gtcGanDay'];
-    delete localStorage['gtcGanDay'];
-    localStorage['TCA-tienCom'] = localStorage['tienCom'];
-    delete localStorage['tienCom'];
-    localStorage['TCA-apDungTienCom'] = localStorage['apDungTienCom'];
-    delete localStorage['apDungTienCom'];
-  }
-  else if (localStorage['coChu'] != null) {
-    delete localStorage['phienBan'];
-    delete localStorage['coChu'];
-    delete localStorage['lcb'];
-    delete localStorage['gtcGanDay'];
-    delete localStorage['tienCom'];
-    delete localStorage['apDungTienCom'];
-  }
-})();
+if (localStorage[nam] != null) {
+  localStorage[`TCA-${nam}`] = localStorage[nam];
+  delete localStorage[nam];
+  localStorage['TCA-phienBan'] = localStorage['phienBan'];
+  delete localStorage['phienBan'];
+  localStorage['TCA-coChu'] = localStorage['coChu'];
+  delete localStorage['coChu'];
+  localStorage['TCA-lcb'] = localStorage['lcb'];
+  delete localStorage['lcb'];
+  localStorage['TCA-gtcGanDay'] = localStorage['gtcGanDay'];
+  delete localStorage['gtcGanDay'];
+  localStorage['TCA-tienCom'] = localStorage['tienCom'];
+  delete localStorage['tienCom'];
+  localStorage['TCA-apDungTienCom'] = localStorage['apDungTienCom'];
+  delete localStorage['apDungTienCom'];
+}
+else if (localStorage['coChu'] != null) {
+  delete localStorage['phienBan'];
+  delete localStorage['coChu'];
+  delete localStorage['lcb'];
+  delete localStorage['gtcGanDay'];
+  delete localStorage['tienCom'];
+  delete localStorage['apDungTienCom'];
+}
 //==========
 
 (function appStart() {

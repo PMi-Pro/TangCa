@@ -1,4 +1,4 @@
-// Đăng ký Service Worker: Đặt ở đầu thẻ body (Html) hoặc đầu file main.js
+// Đăng ký Service Worker: Đặt ở cuối thẻ body (Html) hoặc cuối file main.js
 /*window.onload = async () => {
   if ('serviceWorker' in navigator) {
     try {
