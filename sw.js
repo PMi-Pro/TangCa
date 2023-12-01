@@ -9,7 +9,7 @@
 }*/
 
 // Phiên bản bộ đệm
-const version = '0.8';
+const version = '0.8.1';
 // Tên bộ đệm
 const cacheName = `TangCa-v${version}`;
 // Danh sách các file cần đưa vào bộ đệm

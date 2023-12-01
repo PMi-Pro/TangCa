@@ -2,8 +2,8 @@
 navigator.serviceWorker.oncontrollerchange = () => location.reload();
 
 // Phiên bản ứng dụng
-const phienBan = '0.8',
-  ngayCapNhat = '(20.11.2023)';
+const phienBan = '0.8.1',
+  ngayCapNhat = '(01.12.2023)';
 // Nội dung cập nhật
 const noiDungCapNhat = `
 - Cập nhật hệ thống lưu dữ liệu mới
@@ -73,8 +73,11 @@ else if (localStorage['coChu'] != null) {
   }
 
   // Lấy dữ liệu ban đầu nếu có
-  if (localStorage[`TCA-${nam}`] != null)
+  if (localStorage[`TCA-${nam}`] != null) {
     data = JSON.parse(localStorage[`TCA-${nam}`]);
+    if (data[thang] == null)
+      data[thang] = {}
+  }
   else {
     data = {
       [thang]: {}
@@ -575,7 +578,7 @@ function tuyChonKhac() {
 1. Xoá dữ liệu tháng này
 2. Xoá tất cả dữ liệu
 3. Nhật ký phiên bản
-\nChọn một giá trị số tương ứng:`, 0);
+\nChọn một giá trị số tương ứng:`);
   if (check != null && check.trim().length > 0) {
     if (check == '1') {
       if (prompt(`•••  THÔNG BÁO HỆ THỐNG  •••\n\nDữ liệu tháng ${thang} sẽ bị xoá\n\nNhập 123 nhấn OK để xác nhận`) == '123') {
@@ -619,7 +622,7 @@ function nhatKyPhienBan() {
 0.2 (07.08.2023)
 - Hỗ trợ sử dụng ngoại tuyến\n
 0.1 (06.08.2023)
-- Bản phát hành đầu tiên`;
+- Bản thử nghiệm đầu tiên`;
   popUpThongBao(text);
 }
 
