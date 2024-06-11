@@ -1,0 +1,23 @@
+0.8 (01.12.2023)
+- Cập nhật cấu trúc lưu dữ liệu mới
+
+0.7 (12.11.2023)
+- Sửa lỗi, cập nhật mã nguồn
+
+0.6 (10.11.2023)
+- Thêm tính năng: Chốt ngày tăng ca tự động
+
+0.5 (24.08.2023)
+- Thêm tính năng: "Sao Lưu Dữ Liệu", "Khôi Phục Dữ Liệu"
+
+0.4 (21.08.2023)
+- Cập nhật giao diện người dùng
+
+0.3 (19.08.2023)
+- Thêm tính năng: "Thay Đổi Cỡ Chữ"
+
+0.2 (07.08.2023)
+- Hỗ trợ sử dụng ngoại tuyến
+
+0.1 (06.08.2023)
+- Bản thử nghiệm
