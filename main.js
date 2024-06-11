@@ -1,1 +1,696 @@
-const _0xae0e21=_0x4915;(function(x,a){let n=_0x4915,_=x();for(;;)try{let t=parseInt(n(378))/1*(-parseInt(n(451))/2)+-parseInt(n(471))/3+parseInt(n(298))/4*(-parseInt(n(385))/5)+parseInt(n(354))/6+parseInt(n(404))/7*(parseInt(n(396))/8)+-parseInt(n(278))/9*(-parseInt(n(463))/10)+-parseInt(n(420))/11;if(330740===t)break;_.push(_.shift())}catch(e){_.push(_.shift())}})(_0x14ed,330740),navigator[_0xae0e21(377)][_0xae0e21(303)]=()=>location[_0xae0e21(368)]();const phienBan="0.9",ngayCapNhat=_0xae0e21(480),noiDungCapNhat=_0xae0e21(459),$=document[_0xae0e21(275)][_0xae0e21(417)](document);$("#version").innerText=_0xae0e21(308)+"0.9";const today=new Date;$("#tuyChon")[1][_0xae0e21(269)]+=" "+today[_0xae0e21(273)](),$(_0xae0e21(316))[_0xae0e21(342)]=today[_0xae0e21(273)]()+"-"+("0"+(today[_0xae0e21(262)]()+1)).slice(-2)+"-"+("0"+today[_0xae0e21(284)]())[_0xae0e21(474)](-2);const chonThang=$(_0xae0e21(432));function _0x14ed(){let x=["display","#inputNgayTrongThang","length","<td onclick='themDuLieu()' colspan='2'>Th\xe1ng ","\n----------\n\nTiền t.ca:            ","split","duLieuCu2","#chonNgay","#btnThoatThongBao","innerHTML","data","TCA-coChu","TCA-loaiTcGanDay","#btnKhoiPhuc","TCA-phanTramTc","loaiTc","Gi\xe1 trị ng\xe0y trong th\xe1ng kh\xf4ng hợp lệ","DỮ LIỆU","#inputUpload","•••  TH\xd4NG B\xc1O CẬP NHẬT  •••\n\nĐ\xe3 cập nhật phi\xean bản:  ","C\xf3 dữ liệu","format","tienCom","•••  LƯU DỮ LIỆU TĂNG CA  •••\n\nDữ liệu tăng ca ","coChu","none"," • Ng\xe0y ","lcb"," ng\xe0y  •  ",'Gợi \xfd:  Nhấn v\xe0o mục "Lương cơ bản" (m\xe0u xanh l\xe1 c\xe2y), để th\xeam lương cơ bản trước khi sử dụng!',"Chưa c\xf3 dữ liệu để sao lưu!","Thứ Tư","share","value","Thứ Bảy","#thGioTC","Thứ S\xe1u","#inputCoChu","<br><h5 style='margin: 2px; color: brown;'>Lcb: ","Lương cơ bản mới l\xe0:  ","Gi\xe1 trị giờ tăng ca kh\xf4ng hợp lệ","Cập nhật","body","#btnThoatKhoiPhuc","<td onclick=\"thongKeThang()\" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 2 • ","2010564juEpOb","•••  SAO LƯU DỮ LIỆU  •••\n\nHệ thống sẽ tạo một bản sao lưu bao gồm tất cả dữ liệu năm ","onload","•••  TH\xd4NG B\xc1O HỆ THỐNG  •••\n\nHệ thống y\xeau cầu c\xf3 lương cơ bản để t\xednh to\xe1n tiền tăng ca, vui l\xf2ng nhập lương cơ bản trước khi sử dụng (bắt buộc)\n\nLưu \xfd:  H\xe3y nhập đ\xfang lương cơ bản, nếu nhập sai khi th\xeam dữ liệu hệ thống t\xednh to\xe1n, thống k\xea tiền tăng ca sẽ bị sai\n\nGợi \xfd:  Sửa lại hoặc nhấn OK để tiếp tục","#btnThem","TCA-ngayTrongThang","Thứ Năm","createObjectURL","#tieuDeThemDuLieu","Chia sẽ web tăng ca","revokeObjectURL","disabled","floor","caiDat","reload","#btnLuuCaiDat","stringify","Gi\xe1 trị tiền cơm kh\xf4ng hợp lệ!"," tiếng  •  ","#thuNgay","THỐNG K\xca","Tăng ca ng\xe0y (","click","serviceWorker","2Qkhdio",'Gợi \xfd:  Nhấn v\xe0o mục "Th\xeam Dữ Liệu" để th\xeam giờ tăng ca!',"#lableTcNgay","•••  TH\xd4NG B\xc1O HỆ THỐNG  •••\n\nTệp kh\xf4i phục n\xe0y l\xe0 năm ","removeItem","  ng\xe0y\n\nTổng giờ t.ca:     ","TCA-gtcGanDay","93515UcLCwe","•••  CH\xc0O MỪNG TĂNG CA ","download","Kh\xf4ng c\xf3 dữ liệu","dem","trim","then","#radioTcNgay","thongTin","#btnThoatCaiDat","Tăng ca đ\xeam (","437384NDLsfd","\n----------\n","loaiTcGanDay","files","#inputThemDuLieu","duLieuCu1","#inputTcNgay","block","84FPPExo","#lableTcDem","</h5>",":  ","<br><h5 style='margin: 2px; color: brown;'>Cơm: ",' đ\xe3 được lưu!\n\nĐể xem lại dữ liệu tăng ca đ\xe3 lưu, v\xe0o "Menu" chọn "Dữ Liệu Đ\xe3 Lưu" sau đ\xf3 nhập số năm c\xf3 dữ liệu cần xem\n\nNhấn OK để tiếp tục',"#divUpload","href","thoiGian","\n\nKiểu sao lưu:  Tệp tin tải về\nT\xean tệp tin:  TangCa_","  tiếng\nTổng tiền:    ","TCA-","duLieuDaLuu","bind","#thLcb","Đ\xe3 cập nhật lương cơ bản!\n\n","3245462ujvoPA","\nNăm  ","Đ\xe3 cập nhật giờ tăng ca!\n\n","duLieuCu3","com","gtcGanDay","NumberFormat","saoLuuDuLieu","Chủ Nhật","Chưa thay đổi lương cơ bản!","TCA-apDungTienCom","#divThongBao","#chonThang","Chưa c\xf3","Gi\xe1 trị nhập v\xe0o kh\xf4ng hợp lệ!","Đ\xe3 cập nhật phần trăm tăng ca!\n\n","Thứ Ba","#inputTienCom","onclick","\n\n----------\n\nNội dung cập nhật bao gồm:\n","style","#divThemDuLieu","TangCa_","\n      <tr>\n        <td onclick='suaDuLieu(","TCA-phienBan","H\xe3y thay đổi dữ liệu trước khi cập nhật!","  •••\n\n  1. Đề xuất sử dụng tr\xecnh duyệt Chrome cho Android v\xe0 Safari cho IOS. Tr\xe1nh sử dụng c\xe1c tr\xecnh duyệt Web được t\xedch hợp trong c\xe1c ứng dụng mạng x\xe3 hội như: Facebook Messenger, Zalo v.v.. v\xec c\xf3 thể sẽ bị lỗi hoặc mất dữ liệu kh\xf4ng mong muốn\n\n  2. Dữ liệu tăng ca được lưu trong 'Local Storage' (một Api lưu dữ liệu cục bộ tr\xean tr\xecnh duyệt Web n\xe0y), nếu xo\xe1 dữ liệu trang Web của tr\xecnh duyệt n\xe0y, tất cả dữ liệu tăng ca sẽ bị mất, ri\xeang lịch sử duyệt Web hoặc dữ liệu kh\xe1c như: Bộ đệm hoặc c\xe1c c\xe0i đặt trang Web bị xo\xe1 sẽ kh\xf4ng ảnh hưởng đến dữ liệu đ\xe3 lưu\n\n  3. Tất cả dữ liệu người d\xf9ng được lưu cố định tr\xean tr\xecnh duyệt Web n\xe0y, nếu sử dụng một tr\xecnh duyệt Web kh\xe1c hoặc tab ri\xeang tư để truy cập sẽ kh\xf4ng t\xecm thấy dữ liệu đ\xe3 được lưu trước đ\xf3","thongKe","ng\xe0y","H\xe3y chọn tệp kh\xf4i phục trước!","0 tiếng","211894GSHZmY"," ng\xe0y • ","toLowerCase","Lưu \xfd:  Lương cơ bản phải l\xe0 gi\xe1 trị số v\xe0 lớn hơn 0","  l\xean  "," • Pt: ","Lương cơ bản: ","Th\xeam","\n- Cập nhật giao diện người d\xf9ng\n- Ph\xe2n loại tăng ca ng\xe0y, đ\xeam\n- Bổ sung mục c\xe0i đặt chi tiết","Dữ liệu đ\xe3 tồn tại:\n\n",".json","#btnThemDuLieu","10dtqvZB","gtc","----------\nTổng ng\xe0y:  ","year","•••  TH\xd4NG B\xc1O HỆ THỐNG  •••\n\nKh\xf4ng c\xf3 dữ liệu!\n\nKhi hết th\xe1ng 12 năm ","Đ\xe3 xo\xe1:  ","•••  TH\xd4NG TIN WEB TĂNG CA  •••\n\nPhi\xean bản:  ","#inputTcDem","1262754YUdsQx","TCA-duLieu","SỬA DỮ LIỆU","slice","TCA-lcb","pmi","Gi\xe1 trị tăng ca ng\xe0y kh\xf4ng hợp lệ",", hệ thống sẽ tự động lưu dữ liệu (trong phạm vi 3 năm) để xem lại khi cần","Tiền cơm bị tr\xf9ng!","(10.06.2024)","target","  ng\xe0y\nTổng giờ:     ","getMonth"," chưa c\xf3 dữ liệu</td>","phanTramTc","fontSize","ngay","Lương cơ bản vừa nhập l\xe0:  "," • (Đ\xeam)","innerText","result","parse","\nTh\xe0nh tiền:         ","getFullYear","</td>\n        <td onclick='xoaDuLieu(","querySelector"," tiếng • ","\n\nChọn năm c\xf3 dữ liệu cần xem:","3921759NNZPfM","•••  SỰ CỐ KH\xd4I PHỤC  •••\n\nTệp kh\xf4i phục chứa dữ liệu kh\xf4ng hợp lệ hoặc đ\xe3 bị thay đổi, chỉnh sửa!\n\nChi tiết m\xe3 sự cố:\n","#radioTcDem"," đ\n\nTiền cơm:           ",")'>","Kh\xf4i phục th\xe0nh c\xf4ng!","getDate","change","Đ\xe3 cập nhật tiền cơm!\n\n"," TĂNG CA ","entries","#btnThoatThemDuLieu","hidden","Gi\xe1 trị tăng ca đ\xeam kh\xf4ng hợp lệ"," đ\n","#tuyChon","</td>\n      </tr>","TCA-tienCom","menu","setDate","36Eqgqqe","  tiếng","Th ","#version"," đ</td>","oncontrollerchange","•••  KH\xd4I PHỤC DỮ LIỆU  •••\n\nLưu \xfd:  Tất cả dữ liệu hiện tại sẽ được thay thế bằng dữ liệu trong tệp kh\xf4i phục\n\nNhấn OK v\xe0 chọn tệp kh\xf4i phục","getDay","<td onclick=\"thongKeThang()\" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 1 • ","version.txt","Phi\xean bản "];return(_0x14ed=function(){return x})()}chonThang[_0xae0e21(342)]=today[_0xae0e21(262)]()+1;const tbody=$("table>tbody"),nam=today[_0xae0e21(273)](),thu=[_0xae0e21(428),"Thứ Hai",_0xae0e21(436),_0xae0e21(340),_0xae0e21(360),_0xae0e21(345),_0xae0e21(343)];let thang=chonThang[_0xae0e21(342)],tenThu=thu[today[_0xae0e21(305)]()],ngay=today[_0xae0e21(284)](),data;const phanTramTC=null!=localStorage[_0xae0e21(323)]?JSON.parse(localStorage[_0xae0e21(323)]):{ngay:1.5,dem:2.15};let loaiTcGanDay=null!=localStorage[_0xae0e21(321)]?localStorage[_0xae0e21(321)]:"ng\xe0y",ngayTrongThang=null!=localStorage[_0xae0e21(359)]?parseInt(localStorage["TCA-ngayTrongThang"]):26,xemDayDu=!1;function kiemTraLuuDuLieu(x=!1){let a=_0xae0e21;if(!x)return nam;for(let n=nam-1;n>nam-4;n--)if(a(415)+n in localStorage)return n}function setFontSize(x=14){let a=_0xae0e21,n=x+"px";$("*")[a(440)][a(265)]=n,$(a(432))[a(440)][a(265)]=n,$(a(316))[a(440)][a(265)]=n,$(a(293)).style[a(265)]=n,$(a(400))[a(440)][a(265)]=n,$(a(289))[a(440)][a(265)]=n,$(a(462))[a(440)][a(265)]=n,$(a(327))[a(440)][a(265)]=n,$(a(352)).style[a(265)]=n,$(a(322))[a(440)][a(265)]=n,$(a(317))[a(440)][a(265)]=n,$(a(346))[a(440)][a(265)]=n,$(a(437)).style[a(265)]=n,$("#inputTcNgay")[a(440)][a(265)]=n,$(a(470))[a(440)][a(265)]=n,$("#inputNgayTrongThang")[a(440)][a(265)]=n,$(a(394))[a(440)].fontSize=n,$(a(369))[a(440)][a(265)]=n,$(a(358)).style.fontSize=n}function popUpThongBao(x){let a=_0xae0e21;document[a(351)][a(440)].overflow=a(290),$(a(431)).style.display=a(403),$("#textThongBao")[a(269)]="\n"+x+"\n\n"}function _0x4915(x,a){let n=_0x14ed();return(_0x4915=function(x,a){return n[x-=262]})(x,a)}function thayDoiThang(){let x=_0xae0e21;thang=chonThang.value,$(x(316))[x(342)]=today[x(273)]()+"-"+("0"+thang)[x(474)](-2)+"-"+(thang==today[x(262)]()+1?("0"+today.getDate())[x(474)](-2):"01");let a=new Date($(x(316))[x(342)]);tenThu=thu[a[x(305)]()],ngay=a[x(284)](),null==data[thang]&&(data[thang]={}),layDuLieu()}function thayDoiNgay(x){let a=_0xae0e21,n=new Date(x.target[a(342)]);tenThu=thu[n.getDay()],ngay=n[a(284)](),$(a(373))[a(269)]=tenThu+a(335)+ngay}async function menuTuyChon(){let x=_0xae0e21,a=$(x(293));if(a.value==x(447))thongKeNam();else if(a.value==x(416))duLieuDaLuu();else if(a[x(342)]==x(427))saoLuuDuLieu();else if("khoiPhucDuLieu"==a[x(342)])confirm(x(304))&&setTimeout(()=>$(x(410)).style[x(309)]=x(403),200);else if(a.value==x(367)){$(x(373))[x(269)]=tenThu+x(335)+ngay,$(x(346))[x(342)]=localStorage[x(320)],$("#inputTienCom")[x(342)]="1"==localStorage["TCA-apDungTienCom"]?localStorage[x(295)]:null,$(x(380))[x(318)]=x(375)+100*phanTramTC[x(266)]+"%)",$(x(405))[x(318)]=x(395)+100*phanTramTC[x(389)]+"%)",$(x(402))[x(342)]=phanTramTC[x(266)],$("#inputTcDem")[x(342)]=phanTramTC[x(389)];let n=$(x(310));ngayTrongThang>0?n[x(342)]=ngayTrongThang:n[x(342)]=null,$("#divCaiDat")[x(440)][x(309)]=x(403)}else if("chiaSe"==a.value){let _={title:x(363),url:"https://pmi-pro.github.io/TangCa"};try{await navigator[x(341)](_)}catch{}}else a[x(342)]==x(393)&&alert(x(469)+"0.9 "+ngayCapNhat+"\n\nT\xe1c giả:  Nguyễn Phương Minh\n\nHỗ trợ, g\xf3p \xfd:  0969.442.210 (c\xf3 Zalo)");a[x(342)]=x(296)}function countDaysOfMonth(x,a,n=!1){let _=_0xae0e21;if(0!=ngayTrongThang)return ngayTrongThang;let t=new Date(a,x-1,1),e=new Date(a,x,0),i=0;for(;t<=e;)(0!==t[_(305)]()&&n?6!==t[_(305)]():0!==t[_(305)]())&&i++,t[_(297)](t[_(284)]()+1);return i}function chotNgayTC(){for(let x=16;x<=31;x++)if(null!=data[thang][x]){for(let a=15;a>=1;a--)if(null!=data[thang][a])return a}return 0}function layDuLieu(){let x=_0xae0e21,a=chotNgayTC(),n=countDaysOfMonth(thang,nam),_=localStorage["TCA-apDungTienCom"];tbody.innerHTML=null;let t=0,e=0,i=0,u=0,l=0,h=0;for(let[c,o]of Object[x(288)](data[thang])){t++,e+=o.gtc;let g="1"==_&&o[x(324)].tg==x(448)&&1.5==o[x(464)]?o[x(424)]:0;i+=o[x(336)]/n/8*o[x(324)].pt*o[x(464)]+g,tbody.innerHTML+=x(443)+c+x(282)+o[x(412)]+("ng\xe0y"!=o[x(324)].tg?x(268):"")+(xemDayDu?x(347)+tinhTien(o[x(336)])+x(456)+o[x(324)].pt+"</h5>":"")+x(274)+c+")'>"+o[x(464)]+(xemDayDu&&"1"==_&&1.5==o[x(464)]?x(408)+tinhTien(o[x(424)])+x(406):"")+x(294),c==a&&(tbody[x(318)]+=x(306)+t+x(452)+e+x(276)+tinhTien(i)+x(302),u=t,l=e,h=i)}""!=tbody[x(318)]?($(x(344))[x(269)]=e+" tiếng • "+tinhTien(i)+" đ",a>0&&(tbody[x(318)]+=x(353)+(t-u)+x(452)+(e-l)+x(276)+tinhTien(i-h)+x(302))):($(x(344))[x(269)]=x(450),tbody[x(318)]=x(312)+thang+x(263),setTimeout(()=>{let a=x;null==localStorage[a(475)]?alert(a(338)):0==Object.keys(data[thang])[a(311)]&&alert(a(379))},2e3))}function themDuLieu(){let x=_0xae0e21;if(null!=localStorage["TCA-lcb"])null==data[thang][ngay]?($("#tieuDeThemDuLieu")[x(269)]="TH\xcaM DỮ LIỆU",$(x(373)).innerText=tenThu+x(335)+ngay,$("#inputThemDuLieu")[x(342)]=null!=localStorage[x(384)]?localStorage[x(384)]:1.5,"ng\xe0y"==loaiTcGanDay?$(x(392))[x(376)]():$(x(280))[x(376)](),$(x(462))[x(269)]=x(458),$(x(441))[x(440)][x(309)]="block"):alert(x(460)+tenThu+x(335)+ngay+x(407)+data[thang][ngay].gtc+x(299));else{let a=prompt(x(357),6397500);null!=a&&(!isNaN(a)&&parseInt(a)>0?confirm("Lương cơ bản vừa nhập l\xe0:  "+tinhTien(parseInt(a))+" đ\n\nNhấn OK để x\xe1c nhận")?(localStorage[x(475)]=a,alert(x(348)+tinhTien(parseInt(a))+" đ"),$(x(418))[x(269)]=x(457)+tinhTien(parseInt(a))+" đ"):alert(x(429)):(alert(x(454)),suaLuongCB()))}}!function x(){let a=_0xae0e21;if(null==localStorage[a(444)])localStorage["TCA-phienBan"]="0.9";else if("0.9"!=localStorage[a(444)]){let n=localStorage[a(444)];localStorage[a(444)]="0.9",setTimeout(()=>alert(a(328)+n+a(455)+"0.9"+a(439)+noiDungCapNhat),200)}if(null==localStorage[a(415)+nam]){let _=kiemTraLuuDuLieu(!0);null!=localStorage[a(415)+_]&&(data=JSON[a(271)](localStorage["TCA-"+_]),thongKeNam(!0))}null!=localStorage[a(415)+nam]?null==(data=JSON[a(271)](localStorage[a(415)+nam]))[thang]&&(data[thang]={}):(data={[thang]:{}},null==localStorage[a(320)]&&(localStorage[a(320)]="14",localStorage["TCA-tienCom"]="13000",localStorage[a(430)]="1"),setTimeout(()=>alert(a(386)+nam+a(446)),200)),setFontSize(localStorage[a(320)]);for(let t=thang;t<12;t++)chonThang[t][a(365)]=!0;if($(a(418))[a(269)]=a(457)+(null!=localStorage[a(475)]?tinhTien(parseInt(localStorage["TCA-lcb"]))+" đ":a(433)),null==localStorage[a(321)]&&null!=localStorage[a(415)+nam]){localStorage["TCA-loaiTcGanDay"]=loaiTcGanDay;for(let e=thang;e>=1;e--)if(null!=data[e])for(let i in data[e])data[e][i][a(324)]={pt:phanTramTC[a(266)],tg:loaiTcGanDay};localStorage[a(415)+nam]=JSON[a(370)](data)}layDuLieu()}();let obj;function btnDivThemDuLieu(){let x=_0xae0e21,a=$(x(400))[x(342)];if("Th\xeam"==$(x(462)).innerText){if(!isNaN(a)&&parseFloat(a)>0){let n=loaiTcGanDay,_=n==x(448)?phanTramTC[x(266)]:phanTramTC[x(389)];data[thang][ngay]={thoiGian:tenThu+" • Ng\xe0y "+ngay,gtc:parseFloat(a),lcb:parseInt(localStorage[x(475)]),com:parseInt(localStorage[x(295)]),loaiTc:{pt:_,tg:n}},$(x(441))[x(440)][x(309)]=x(334),setTimeout(layDuLieu,200),localStorage[x(415)+nam]=JSON[x(370)](data),a!=localStorage[x(384)]&&(localStorage[x(384)]=a),n!=localStorage[x(321)]&&(localStorage["TCA-loaiTcGanDay"]=n)}else alert(x(349))}else{let t=a[x(314)]("="),e=t[0][x(453)]();if(obj[x(464)]==a&&obj[x(324)].tg==loaiTcGanDay)return alert(x(445));if(a[x(453)]()==x(476)){xemDayDu=!0,$(x(441)).style[x(309)]=x(334),alert("Đ\xe3 bật chế độ xem dữ liệu đầy đủ!"),setTimeout(layDuLieu,500);return}if(xemDayDu&&e==x(336)&&!isNaN(t[1])&&parseInt(t[1])>0){if(t[1]==obj[x(336)])return alert("Lương cơ bản bị tr\xf9ng!");obj.lcb=parseInt(t[1]),alert(x(419)+obj[x(412)]+x(407)+tinhTien(obj[x(336)])+" đ")}else if(xemDayDu&&"pt"==e&&!isNaN(t[1])&&parseFloat(t[1])>0){if(t[1]==obj.loaiTc.pt)return alert("Phần trăm tăng ca bị tr\xf9ng!");obj[x(324)].pt=parseFloat(t[1]),alert(x(435)+obj[x(412)]+x(407)+obj[x(324)].pt)}else if(xemDayDu&&"1"==localStorage[x(430)]&&1.5==obj[x(464)]&&e==x(424)&&!isNaN(t[1])&&parseInt(t[1])>0){if(t[1]==obj.com)return alert(x(479));obj[x(424)]=parseInt(t[1]),alert(x(286)+obj.thoiGian+x(407)+tinhTien(obj[x(424)])+" đ")}else if(!isNaN(a)&&parseFloat(a)>0)obj[x(464)]!=a&&(obj[x(464)]=parseFloat(a),alert(x(422)+obj.thoiGian+x(407)+obj[x(464)]+x(299)));else if(0>=parseFloat(a)||isNaN(a)||0==a[x(390)]()[x(311)])return alert("Gi\xe1 trị cập nhật kh\xf4ng hợp lệ!");"pt"!=e&&obj.loaiTc.tg!=loaiTcGanDay&&(loaiTcGanDay==x(448)?obj.loaiTc.pt=phanTramTC[x(266)]:obj.loaiTc.pt=phanTramTC[x(389)],obj[x(324)].tg=loaiTcGanDay),$(x(441)).style[x(309)]=x(334),setTimeout(layDuLieu,500),localStorage[x(415)+nam]=JSON.stringify(data)}}function suaDuLieu(x){let a=_0xae0e21;obj=data[thang][x],$(a(362))[a(269)]=a(473),$(a(373)).innerText=obj[a(412)];let n=$(a(400));n[a(342)]=obj[a(464)],"ng\xe0y"==obj.loaiTc.tg?$(a(392))[a(376)]():$(a(280)).click(),$(a(462))[a(269)]=a(350),$("#divThemDuLieu").style[a(309)]=a(403)}function xoaDuLieu(x){let a=_0xae0e21,n=data[thang][x];confirm("•••  XO\xc1 DỮ LIỆU  •••\n\n"+n.thoiGian+a(407)+n[a(464)]+"  tiếng\n\nNhấn OK để xo\xe1")&&(alert(a(468)+n[a(412)]),delete data[thang][x],setTimeout(layDuLieu,500),localStorage["TCA-"+nam]=JSON[a(370)](data))}function thongKeThang(){let x=_0xae0e21,a=countDaysOfMonth(thang,nam),n=localStorage[x(430)],_=0,t=0,e=0,i=0;for(let u in data[thang]){let l=data[thang][u];_++,t+=l[x(464)],i+="1"==n&&"ng\xe0y"==l[x(324)].tg&&1.5==l[x(464)]?l[x(424)]:0,e+=l.lcb/a/8*l[x(324)].pt*l.gtc}alert("•••  THỐNG K\xca TH\xc1NG "+thang+"  •••\n\nTổng ng\xe0y t.ca:  "+_+x(383)+t+"  tiếng\n"+(i>0?x(313)+tinhTien(e)+x(281)+tinhTien(i)+x(292):"")+x(272)+tinhTien(e+i)+" đ")}function thongKeNam(x=!1){let a=_0xae0e21,n=kiemTraLuuDuLieu(x),_=(x?a(326):a(374))+a(287)+n+a(397),t=localStorage[a(430)],e=0,i=0,u=0,l=0;for(let h=1;h<=12;h++){if(null==data[h])continue;let c=countDaysOfMonth(h,n),o=0,g=0,T=0,d=0;for(let r in data[h]){let y=data[h][r];e++,o++,g+=y[a(464)],d+="1"==t&&y.loaiTc.tg==a(448)&&1.5==y[a(464)]?y[a(424)]:0,T+=y[a(336)]/c/8*y[a(324)].pt*y[a(464)]}i+=g,u+=T,l+=d,o>0&&(_+=a(300)+(h>=10?h:"0"+h)+a(407)+o+a(337)+g+a(372)+tinhTien(T+d)+a(292))}0==e&&(_+="(Chưa c\xf3 dữ liệu)\n"),_+=a(465)+e+a(482)+i+a(414)+tinhTien(u+l)+" đ",x?(localStorage[a(472)+n]=_,localStorage[a(382)]("TCA-"+n),localStorage[a(382)](a(472)+(nam-4)),setTimeout(()=>alert(a(332)+n+a(409)),200)):alert(_)}function duLieuDaLuu(){let x=_0xae0e21;if(null!=localStorage[x(472)+(nam-1)]||null!=localStorage[x(472)+(nam-2)]||null!=localStorage[x(472)+(nam-3)]){let a=prompt("•••  DỮ LIỆU Đ\xc3 LƯU  •••\n\nNăm  "+(nam-1)+x(407)+x(null!=localStorage["TCA-duLieu"+(nam-1)]?329:388)+x(421)+(nam-2)+x(407)+x(null!=localStorage[x(472)+(nam-2)]?329:388)+x(421)+(nam-3)+x(407)+(null!=localStorage[x(472)+(nam-3)]?x(329):"Kh\xf4ng c\xf3 dữ liệu")+x(277),nam-1);null!=a&&(!isNaN(a)&&parseInt(a)>=nam-3?null!=localStorage["TCA-duLieu"+a]?alert(localStorage["TCA-duLieu"+a]):(alert("Kh\xf4ng c\xf3 dữ liệu năm "+a),duLieuDaLuu()):(alert(x(434)),duLieuDaLuu()))}else alert(x(467)+nam+x(478))}function suaLuongCB(){let x=_0xae0e21,a=prompt("•••  THAY ĐỔI LƯƠNG CƠ BẢN  •••\n\nLưu \xfd:  H\xe3y nhập đ\xfang lương cơ bản, nếu nhập sai khi th\xeam dữ liệu hệ thống t\xednh to\xe1n, thống k\xea tiền tăng ca sẽ bị sai\n\nGợi \xfd:  Sửa lại hoặc nhấn OK để tiếp tục",""+(null==localStorage[x(475)]?6397500:localStorage[x(475)]));if(null!=a){if(!isNaN(a)&&parseInt(a)>0){if(confirm(x(267)+tinhTien(parseInt(a))+" đ\n\nNhấn OK để x\xe1c nhận")){alert(x(348)+tinhTien(parseInt(a))+" đ"),$("#thLcb")[x(269)]=x(457)+tinhTien(parseInt(a))+" đ",localStorage[x(475)]=a;let n=today.getMonth()+1,_=today[x(284)]();null!=data[n][_]&&(data[n][_][x(336)]=parseInt(a),setTimeout(layDuLieu,500),localStorage[x(415)+nam]=JSON[x(370)](data))}else alert(x(429))}else alert(x(454)),suaLuongCB()}}function saoLuuDuLieu(){let x=_0xae0e21;if(null!=localStorage[x(415)+nam]){let a=confirm(x(355)+nam+x(413)+nam+"\nĐịnh dạng:  Json\n\nNhấn OK để tiếp tục");if(a){let n={year:nam,data:data,coChu:localStorage[x(320)],lcb:localStorage[x(475)],phanTramTc:phanTramTC,ngayTrongThang:ngayTrongThang,gtcGanDay:localStorage["TCA-gtcGanDay"],loaiTcGanDay:loaiTcGanDay,tienCom:localStorage[x(295)],apDungTienCom:localStorage[x(430)],duLieuCu1:localStorage["TCA-duLieu"+(nam-1)],duLieuCu2:localStorage[x(472)+(nam-2)],duLieuCu3:localStorage[x(472)+(nam-3)]},_=new Blob([JSON[x(370)](n)],{type:"application/json"}),t=document.createElement("a");t[x(411)]=URL[x(361)](_),t[x(387)]=x(442)+nam+x(461),t[x(376)](),URL[x(364)](t[x(411)])}}else alert(x(339))}let fileUpload;function khoiPhucDuLieu(){let x=_0xae0e21;if(null!=fileUpload){let a=new FileReader;a[x(356)]=()=>{let n=x;try{let _=JSON[n(271)](a[n(270)]);_[n(466)]==nam?(data=_[n(319)],localStorage[n(415)+nam]=JSON[n(370)](_[n(319)]),localStorage["TCA-coChu"]=_[n(333)],localStorage[n(475)]=_.lcb,localStorage[n(323)]=JSON.stringify(_[n(264)]),localStorage[n(359)]=_.ngayTrongThang,localStorage["TCA-gtcGanDay"]=_[n(425)],localStorage["TCA-loaiTcGanDay"]=_[n(398)],localStorage[n(295)]=_[n(331)],localStorage[n(430)]=_.apDungTienCom,null!=_[n(401)]&&(localStorage[n(472)+(nam-1)]=_[n(401)]),null!=_[n(315)]&&(localStorage[n(472)+(nam-2)]=_[n(315)]),null!=_[n(423)]&&(localStorage[n(472)+(nam-3)]=_[n(423)]),$(n(410))[n(440)].display=n(334),alert(n(283)),setTimeout(()=>location[n(368)](),500)):alert(n(381)+_.year+"\nH\xe3y chọn lại tệp kh\xf4i phục năm "+nam)}catch(t){alert(n(279)+t)}},a.readAsText(fileUpload)}else alert(x(449))}function tinhTien(x){let a=_0xae0e21;return Intl[a(426)]()[a(330)](Math[a(366)](x))}async function nhatKyPhienBan(){let x=_0xae0e21,a=await fetch(x(307))[x(391)](x=>x.text());popUpThongBao("0.9 "+ngayCapNhat+noiDungCapNhat+"\n\n"+a)}function radioTcClick(x){loaiTcGanDay=x}function luuCaiDat(){let x=_0xae0e21,a=$(x(346)),n=$(x(402)),_=$(x(470)),t=$(x(310)),e=$("#inputTienCom");if(!(!isNaN(a[x(342)])&&parseInt(a[x(342)])>=10&&20>=parseInt(a[x(342)])))return alert("Cỡ chữ chỉ trong phạm vi từ 10 - 20");if(a[x(342)]!=localStorage[x(320)]&&(setTimeout(()=>setFontSize(a[x(342)]),200),localStorage[x(320)]=a[x(342)]),!(!isNaN(n[x(342)])&&parseFloat(n[x(342)])>0))return alert(x(477));if(n.value!=phanTramTC[x(266)]){phanTramTC.ngay=parseFloat(n[x(342)]),localStorage[x(323)]=JSON[x(370)]({ngay:parseFloat(n[x(342)]),dem:phanTramTC.dem});let i=today[x(262)]()+1,u=today[x(284)]();null!=data[i][u]&&data[i][u].loaiTc.tg==x(448)&&(data[i][u][x(324)].pt=phanTramTC[x(266)],setTimeout(layDuLieu,500),localStorage["TCA-"+nam]=JSON.stringify(data))}if(!(!isNaN(_[x(342)])&&parseFloat(_[x(342)])>0))return alert(x(291));if(_[x(342)]!=phanTramTC[x(389)]){phanTramTC.dem=parseFloat(_[x(342)]),localStorage[x(323)]=JSON[x(370)]({ngay:phanTramTC[x(266)],dem:parseFloat(_[x(342)])});let l=today[x(262)]()+1,h=today[x(284)]();null!=data[l][h]&&"đ\xeam"==data[l][h][x(324)].tg&&(data[l][h].loaiTc.pt=phanTramTC[x(389)],setTimeout(layDuLieu,500),localStorage[x(415)+nam]=JSON[x(370)](data))}if(isNaN(t.value))return alert(x(325));if(t[x(342)]!=ngayTrongThang&&(null!=t.value&&parseInt(t[x(342)])>0?(ngayTrongThang=parseInt(t.value),localStorage[x(359)]=t[x(342)]):(ngayTrongThang=0,localStorage["TCA-ngayTrongThang"]="0"),setTimeout(layDuLieu,500)),!isNaN(e[x(342)])&&parseInt(e[x(342)])>0){if(e.value!=localStorage["TCA-tienCom"]){localStorage["TCA-tienCom"]=e[x(342)];let c=today[x(262)]()+1,o=today[x(284)]();null!=data[c][o]&&(data[c][o][x(424)]=parseInt(e[x(342)]),localStorage[x(415)+nam]=JSON[x(370)](data)),setTimeout(layDuLieu,200)}else"0"==localStorage[x(430)]&&(localStorage[x(430)]="1",setTimeout(layDuLieu,200))}else{if("0"!=e[x(342)]&&""!=e[x(342)])return alert(x(371));e[x(342)]!=localStorage["TCA-tienCom"]&&(localStorage[x(430)]="0",setTimeout(layDuLieu,200))}$("#divCaiDat")[x(440)][x(309)]=x(334)}$(_0xae0e21(327)).addEventListener(_0xae0e21(285),x=>{let a=_0xae0e21;fileUpload=x[a(481)][a(399)][0]}),$(_0xae0e21(301))[_0xae0e21(438)]=()=>setTimeout(nhatKyPhienBan,200);
+// Kiểm tra nếu có SW mới thì reload lại trang
+navigator.serviceWorker.oncontrollerchange = () => location.reload();
+
+// Phiên bản ứng dụng
+const phienBan = '0.9';
+const ngayCapNhat = '(10.06.2024)';
+// Nội dung cập nhật
+const noiDungCapNhat = `
+- Cập nhật giao diện người dùng
+- Phân loại tăng ca ngày, đêm
+- Bổ sung mục cài đặt chi tiết`;
+
+// Các biến khởi tạo ban đầu
+const $ = document.querySelector.bind(document); // Viết ngắn gọn của hàm querySelector
+$('#version').innerText = `Phiên bản ${phienBan}`;
+const today = new Date();
+$('#tuyChon')[1].innerText += ` ${today.getFullYear()}`;
+$('#chonNgay').value = `${today.getFullYear()}-${('0' + (today.getMonth() + 1)).slice(-2)}-${('0' + today.getDate()).slice(-2)}`;
+const chonThang = $('#chonThang');
+chonThang.value = today.getMonth() + 1;
+const tbody = $('table>tbody');
+const nam = today.getFullYear();
+const thu = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+let thang = chonThang.value;
+let tenThu = thu[today.getDay()];
+let ngay = today.getDate();
+let data; // Dữ liệu tăng ca chính
+const phanTramTC = localStorage['TCA-phanTramTc'] != null ? JSON.parse(localStorage['TCA-phanTramTc']) : { ngay: 1.5, dem: 2.15 }; // Tăng ca ngày 150%, ca đêm 215%
+let loaiTcGanDay = localStorage['TCA-loaiTcGanDay'] != null ? localStorage['TCA-loaiTcGanDay'] : 'ngày'; // Ngày, đêm
+let ngayTrongThang = localStorage['TCA-ngayTrongThang'] != null ? parseInt(localStorage['TCA-ngayTrongThang']) : 26; // Mặc định chia cho 26 ngày
+let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần trăm tăng ca, tiền cơm khi hiển thị
+
+(function appStart() {
+  // Thông báo nếu có phiên bản mới
+  if (localStorage['TCA-phienBan'] == null)
+    localStorage['TCA-phienBan'] = phienBan;
+  else if (phienBan != localStorage['TCA-phienBan']) {
+    const oldVer = localStorage['TCA-phienBan'];
+    localStorage['TCA-phienBan'] = phienBan;
+    setTimeout(() => alert(`•••  THÔNG BÁO CẬP NHẬT  •••\n\nĐã cập nhật phiên bản:  ${oldVer}  lên  ${phienBan}\n\n----------\n\nNội dung cập nhật bao gồm:${noiDungCapNhat}`), 200);
+  }
+
+  // Kiểm tra lưu dữ liệu khi hết năm
+  if (localStorage[`TCA-${nam}`] == null) {
+    const year = kiemTraLuuDuLieu(true);
+    if (localStorage[`TCA-${year}`] != null) {
+      data = JSON.parse(localStorage[`TCA-${year}`]);
+      thongKeNam(true);
+    }
+  }
+
+  // Lấy dữ liệu ban đầu nếu có
+  if (localStorage[`TCA-${nam}`] != null) {
+    data = JSON.parse(localStorage[`TCA-${nam}`]);
+    if (data[thang] == null)
+      data[thang] = {}
+  }
+  else { // Tạo mới dữ liệu
+    data = {
+      [thang]: {}
+    }
+    if (localStorage['TCA-coChu'] == null) {
+      localStorage['TCA-coChu'] = '14';
+      localStorage['TCA-tienCom'] = '13000';
+      localStorage['TCA-apDungTienCom'] = '1';
+    }
+    setTimeout(() => alert(`•••  CHÀO MỪNG TĂNG CA ${nam}  •••\n
+  1. Đề xuất sử dụng trình duyệt Chrome cho Android và Safari cho IOS. Tránh sử dụng các trình duyệt Web được tích hợp trong các ứng dụng mạng xã hội như: Facebook Messenger, Zalo v.v.. vì có thể sẽ bị lỗi hoặc mất dữ liệu không mong muốn\n
+  2. Dữ liệu tăng ca được lưu trong 'Local Storage' (một Api lưu dữ liệu cục bộ trên trình duyệt Web này), nếu xoá dữ liệu trang Web của trình duyệt này, tất cả dữ liệu tăng ca sẽ bị mất, riêng lịch sử duyệt Web hoặc dữ liệu khác như: Bộ đệm hoặc các cài đặt trang Web bị xoá sẽ không ảnh hưởng đến dữ liệu đã lưu\n
+  3. Tất cả dữ liệu người dùng được lưu cố định trên trình duyệt Web này, nếu sử dụng một trình duyệt Web khác hoặc tab riêng tư để truy cập sẽ không tìm thấy dữ liệu đã được lưu trước đó`), 200);
+  }
+
+  // Cỡ chữ ban đầu
+  setFontSize(localStorage['TCA-coChu']);
+
+  // Ẩn các tháng lớn hơn tháng hiện tại
+  for (let i = thang; i < 12; i++) {
+    chonThang[i].disabled = true;
+  }
+
+  // Hiển thị lương cơ bản của thẻ th trong tbody
+  $('#thLcb').innerText = `Lương cơ bản: ${localStorage['TCA-lcb'] != null ? tinhTien(parseInt(localStorage['TCA-lcb'])) + ' đ' : 'Chưa có'}`;
+
+  // Cập nhật phiên bản ca đêm 0.9
+  if (localStorage['TCA-loaiTcGanDay'] == null && localStorage[`TCA-${nam}`] != null) {
+    localStorage['TCA-loaiTcGanDay'] = loaiTcGanDay;
+    for (let i = thang; i >= 1; i--) {
+      if (data[i] == null) continue;
+      for (const day in data[i]) {
+        data[i][day].loaiTc = { pt: phanTramTC.ngay, tg: loaiTcGanDay };
+      }
+    }
+    localStorage[`TCA-${nam}`] = JSON.stringify(data);
+  }
+
+  layDuLieu();
+})();
+
+// Hàm kiểm tra dữ liệu cũ khi sang năm tiếp theo
+function kiemTraLuuDuLieu(kiemTra = false) {
+  if (kiemTra) {
+    for (let i = nam - 1; i > nam - 4; i--) {
+      if (`TCA-${i}` in localStorage)
+        return i;
+    }
+  } else return nam;
+}
+
+function setFontSize(sizes = 14) {
+  const size = sizes + 'px';
+  $('*').style.fontSize = size;
+  $('#chonThang').style.fontSize = size;
+  $('#chonNgay').style.fontSize = size;
+  $('#tuyChon').style.fontSize = size;
+  // Div thêm dữ liệu
+  $('#inputThemDuLieu').style.fontSize = size;
+  $('#btnThoatThemDuLieu').style.fontSize = size;
+  $('#btnThemDuLieu').style.fontSize = size;
+  // Upload khôi phục
+  $('#inputUpload').style.fontSize = size;
+  $('#btnThoatKhoiPhuc').style.fontSize = size;
+  $('#btnKhoiPhuc').style.fontSize = size;
+  $('#btnThoatThongBao').style.fontSize = size;
+  // Cài đặt
+  $('#inputCoChu').style.fontSize = size;
+  $('#inputTienCom').style.fontSize = size;
+  $('#inputTcNgay').style.fontSize = size;
+  $('#inputTcDem').style.fontSize = size;
+  $('#inputNgayTrongThang').style.fontSize = size;
+  $('#btnThoatCaiDat').style.fontSize = size;
+  $('#btnLuuCaiDat').style.fontSize = size;
+  // Btn thêm dữ liệu
+  $('#btnThem').style.fontSize = size;
+}
+
+// Hàm hiện thông báo
+function popUpThongBao(text) {
+  document.body.style.overflow = 'hidden';
+  $('#divThongBao').style.display = 'block';
+  $('#textThongBao').innerText = `\n${text}\n\n`;
+}
+
+function thayDoiThang() {
+  thang = chonThang.value;
+  $('#chonNgay').value = `${today.getFullYear()}-${('0' + thang).slice(-2)}-${thang == (today.getMonth() + 1) ? ('0' + today.getDate()).slice(-2) : '01'}`;
+  const date = new Date($('#chonNgay').value);
+  tenThu = thu[date.getDay()];
+  ngay = date.getDate();
+  if (data[thang] == null)
+    data[thang] = {};
+  layDuLieu();
+}
+
+function thayDoiNgay(e) {
+  const todays = new Date(e.target.value);
+  tenThu = thu[todays.getDay()];
+  ngay = todays.getDate();
+  $('#thuNgay').innerText = `${tenThu} • Ngày ${ngay}`;
+}
+
+async function menuTuyChon() {
+  const tc = $('#tuyChon');
+  if (tc.value == 'thongKe') thongKeNam();
+  else if (tc.value == 'duLieuDaLuu') duLieuDaLuu();
+  else if (tc.value == 'saoLuuDuLieu') saoLuuDuLieu();
+  else if (tc.value == 'khoiPhucDuLieu') {
+    if (confirm('•••  KHÔI PHỤC DỮ LIỆU  •••\n\nLưu ý:  Tất cả dữ liệu hiện tại sẽ được thay thế bằng dữ liệu trong tệp khôi phục\n\nNhấn OK và chọn tệp khôi phục'))
+      setTimeout(() => $('#divUpload').style.display = 'block', 200);
+  }
+  else if (tc.value == 'caiDat') {
+    // Hiển thị các giá trị trong Div cài đặt
+    $('#thuNgay').innerText = `${tenThu} • Ngày ${ngay}`;
+    $('#inputCoChu').value = localStorage['TCA-coChu'];
+    $('#inputTienCom').value = localStorage['TCA-apDungTienCom'] == '1' ? localStorage['TCA-tienCom'] : null;
+    $('#lableTcNgay').innerHTML = `Tăng ca ngày (${phanTramTC.ngay * 100}%)`;
+    $('#lableTcDem').innerHTML = `Tăng ca đêm (${phanTramTC.dem * 100}%)`;
+    $('#inputTcNgay').value = phanTramTC.ngay;
+    $('#inputTcDem').value = phanTramTC.dem;
+    const ngayTrogThag = $('#inputNgayTrongThang');
+    if (ngayTrongThang > 0)
+      ngayTrogThag.value = ngayTrongThang;
+    else ngayTrogThag.value = null;
+    $('#divCaiDat').style.display = 'block';
+  }
+  else if (tc.value == 'chiaSe') {
+    const shareData = {
+      title: 'Chia sẽ web tăng ca',
+      //text: 'Chia sẽ trang Web tăng ca để bạn bè cùng sử dụng',
+      url: 'https://pmi-pro.github.io/TangCa',
+      //files: [] // Chia sẽ các tệp với đối tượng File
+    };
+    try { await navigator.share(shareData); } catch {}
+  }
+  else if (tc.value == 'thongTin') alert(`•••  THÔNG TIN WEB TĂNG CA  •••\n\nPhiên bản:  ${phienBan} ${ngayCapNhat}\n\nTác giả:  Nguyễn Phương Minh\n\nHỗ trợ, góp ý:  0969.442.210 (có Zalo)`);
+  tc.value = 'menu';
+}
+
+// Hàm đếm số ngày trong tháng trừ chủ nhật hoặc thứ bảy
+function countDaysOfMonth(month, year, countSaturday = false) {
+  if (ngayTrongThang != 0) // 26 ngày
+    return ngayTrongThang;
+  // Đến số ngày làm trong tháng
+  const firstDay = new Date(year, month - 1, 1); // Tạo ngày đầu tiên của tháng
+  const lastDay = new Date(year, month, 0); // Tạo ngày cuối cùng của tháng 
+  let count = 0; // Khởi tạo biến đếm 
+  while (firstDay <= lastDay) { // Lặp qua từng ngày trong tháng
+    // Nếu không phải chủ nhật (0) và bỏ qua ngày thứ bảy nếu countSaturday là true
+    if (firstDay.getDay() !== 0 && countSaturday ? firstDay.getDay() !== 6 : firstDay.getDay() !== 0) {
+      count++; // Đếm ngày đó
+    }
+    firstDay.setDate(firstDay.getDate() + 1); // Tăng ngày lên 1
+  }
+  return count; // Trả về tổng số ngày đếm được
+}
+
+// Hàm Kiểm tra chốt ngày tăng ca
+function chotNgayTC() {
+  for (let i = 16; i <= 31; i++) {
+    if (data[thang][i] == null) continue;
+    for (let i = 15; i >= 1; i--) {
+      if (data[thang][i] == null) continue;
+      return i; // Trả về giá trị và thoát khỏi vòng lặp, hàm
+    }
+  }
+  return 0; // Trả về 0 nếu các điều kiện ở trên là sai
+}
+
+function layDuLieu() {
+  const chotNgayTangCa = chotNgayTC(); // Lấy ngày chốt tăng ca
+  const dayOfMonth = countDaysOfMonth(thang, nam);
+  const apDungTienCom = localStorage['TCA-apDungTienCom'];
+  tbody.innerHTML = null;
+  let ngay = 0,
+    gio = 0,
+    tien = 0,
+    chotNgay = 0,
+    chotGio = 0,
+    chotTien = 0;
+  for (const [key, obj] of Object.entries(data[thang])) {
+    ngay++;
+    gio += obj.gtc;
+    const com = apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && obj.gtc == 1.5 ? obj.com : 0;
+    tien += obj.lcb / dayOfMonth / 8 * obj.loaiTc.pt * obj.gtc + com;
+
+    tbody.innerHTML += `
+      <tr>
+        <td onclick='suaDuLieu(${key})'>${obj.thoiGian}${obj.loaiTc.tg != 'ngày' ? ' • (Đêm)' : ''}${xemDayDu ? `<br><h5 style='margin: 2px; color: brown;'>Lcb: ${tinhTien(obj.lcb)} • Pt: ${obj.loaiTc.pt}</h5>` : ''}</td>
+        <td onclick='xoaDuLieu(${key})'>${obj.gtc}${xemDayDu && apDungTienCom == '1' && obj.gtc == 1.5 ? `<br><h5 style='margin: 2px; color: brown;'>Cơm: ${tinhTien(obj.com)}</h5>` : ''}</td>
+      </tr>`;
+
+    if (key == chotNgayTangCa) {
+      tbody.innerHTML += `<td onclick="thongKeThang()" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 1 • ${ngay} ngày • ${gio} tiếng • ${tinhTien(tien)} đ</td>`;
+      chotNgay = ngay;
+      chotGio = gio;
+      chotTien = tien;
+    }
+  }
+
+  if (tbody.innerHTML != '') {
+    $('#thGioTC').innerText = `${gio} tiếng • ${tinhTien(tien)} đ`;
+    if (chotNgayTangCa > 0)
+      tbody.innerHTML += `<td onclick="thongKeThang()" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 2 • ${ngay - chotNgay} ngày • ${gio - chotGio} tiếng • ${tinhTien(tien - chotTien)} đ</td>`;
+  }
+  else {
+    $('#thGioTC').innerText = `0 tiếng`;
+    tbody.innerHTML = `<td onclick='themDuLieu()' colspan='2'>Tháng ${thang} chưa có dữ liệu</td>`;
+    setTimeout(() => {
+      if (localStorage['TCA-lcb'] == null)
+        alert('Gợi ý:  Nhấn vào mục "Lương cơ bản" (màu xanh lá cây), để thêm lương cơ bản trước khi sử dụng!');
+      else if (Object.keys(data[thang]).length == 0)
+        alert('Gợi ý:  Nhấn vào mục "Thêm Dữ Liệu" để thêm giờ tăng ca!');
+    }, 2000);
+  }
+}
+
+function themDuLieu() {
+  if (localStorage['TCA-lcb'] != null) {
+    if (data[thang][ngay] == null) {
+      $('#tieuDeThemDuLieu').innerText = 'THÊM DỮ LIỆU';
+      $('#thuNgay').innerText = `${tenThu} • Ngày ${ngay}`;
+      $('#inputThemDuLieu').value = localStorage['TCA-gtcGanDay'] != null ? localStorage['TCA-gtcGanDay'] : 1.5;
+      if (loaiTcGanDay == 'ngày') $('#radioTcNgay').click();
+      else $('#radioTcDem').click();
+      $('#btnThemDuLieu').innerText = 'Thêm';
+      $('#divThemDuLieu').style.display = 'block';
+    } else alert(`Dữ liệu đã tồn tại:\n\n${tenThu} • Ngày ${ngay}:  ${data[thang][ngay].gtc}  tiếng`);
+  }
+  else {
+    const lcb = prompt('•••  THÔNG BÁO HỆ THỐNG  •••\n\nHệ thống yêu cầu có lương cơ bản để tính toán tiền tăng ca, vui lòng nhập lương cơ bản trước khi sử dụng (bắt buộc)\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại hoặc nhấn OK để tiếp tục', 6397500);
+    if (lcb != null) {
+      if (!isNaN(lcb) && parseInt(lcb) > 0) {
+        if (confirm(`Lương cơ bản vừa nhập là:  ${tinhTien(parseInt(lcb))} đ\n\nNhấn OK để xác nhận`)) {
+          localStorage['TCA-lcb'] = lcb;
+          alert(`Lương cơ bản mới là:  ${tinhTien(parseInt(lcb))} đ`);
+          $('#thLcb').innerText = `Lương cơ bản: ${tinhTien(parseInt(lcb))} đ`;
+        } else alert('Chưa thay đổi lương cơ bản!');
+      }
+      else {
+        alert('Lưu ý:  Lương cơ bản phải là giá trị số và lớn hơn 0');
+        suaLuongCB();
+      }
+    }
+  }
+}
+
+let obj; // Biến tạm lưu địa chỉ đối tượng để chỉnh sửa
+function btnDivThemDuLieu() {
+  const value = $('#inputThemDuLieu').value;
+  if ($('#btnThemDuLieu').innerText == 'Thêm') {
+    if (!isNaN(value) && parseFloat(value) > 0) {
+      const tg = loaiTcGanDay;
+      const pt = tg == 'ngày' ? phanTramTC.ngay : phanTramTC.dem;
+      data[thang][ngay] = { thoiGian: `${tenThu} • Ngày ${ngay}`, gtc: parseFloat(value), lcb: parseInt(localStorage['TCA-lcb']), com: parseInt(localStorage['TCA-tienCom']), loaiTc: { pt: pt, tg: tg } };
+      $('#divThemDuLieu').style.display = 'none';
+      setTimeout(layDuLieu, 200);
+      localStorage[`TCA-${nam}`] = JSON.stringify(data);
+      if (value != localStorage['TCA-gtcGanDay'])
+        localStorage['TCA-gtcGanDay'] = value;
+      if (tg != localStorage['TCA-loaiTcGanDay'])
+        localStorage['TCA-loaiTcGanDay'] = tg;
+    } else alert('Giá trị giờ tăng ca không hợp lệ');
+  }
+  else { // Cập nhật
+    const val = value.split('=');
+    const valLowerCase = val[0].toLowerCase();
+    if (obj.gtc == value && obj.loaiTc.tg == loaiTcGanDay)
+      return alert(`Hãy thay đổi dữ liệu trước khi cập nhật!`);
+    else if (value.toLowerCase() == 'pmi') {
+      xemDayDu = true;
+      $('#divThemDuLieu').style.display = 'none';
+      alert('Đã bật chế độ xem dữ liệu đầy đủ!');
+      setTimeout(layDuLieu, 500);
+      return;
+    }
+    else if (xemDayDu && valLowerCase == 'lcb' && !isNaN(val[1]) && parseInt(val[1]) > 0) {
+      if (val[1] != obj.lcb) {
+        obj.lcb = parseInt(val[1]);
+        alert(`Đã cập nhật lương cơ bản!\n\n${obj.thoiGian}:  ${tinhTien(obj.lcb)} đ`);
+      } else return alert('Lương cơ bản bị trùng!');
+    }
+    else if (xemDayDu && valLowerCase == 'pt' && !isNaN(val[1]) && parseFloat(val[1]) > 0) {
+      if (val[1] != obj.loaiTc.pt) {
+        obj.loaiTc.pt = parseFloat(val[1]);
+        alert(`Đã cập nhật phần trăm tăng ca!\n\n${obj.thoiGian}:  ${obj.loaiTc.pt}`);
+      } else return alert('Phần trăm tăng ca bị trùng!');
+    }
+    else if (xemDayDu && localStorage['TCA-apDungTienCom'] == '1' && obj.gtc == 1.5 && valLowerCase == 'com' && !isNaN(val[1]) && parseInt(val[1]) > 0) {
+      if (val[1] != obj.com) {
+        obj.com = parseInt(val[1]);
+        alert(`Đã cập nhật tiền cơm!\n\n${obj.thoiGian}:  ${tinhTien(obj.com)} đ`);
+      } else return alert('Tiền cơm bị trùng!');
+    }
+    else if (!isNaN(value) && parseFloat(value) > 0) {
+      if (obj.gtc != value) {
+        obj.gtc = parseFloat(value);
+        alert(`Đã cập nhật giờ tăng ca!\n\n${obj.thoiGian}:  ${obj.gtc}  tiếng`);
+      }
+    }
+    else if (parseFloat(value) <= 0 || isNaN(value) || value.trim().length == 0)
+      return alert('Giá trị cập nhật không hợp lệ!');
+
+    // Cập nhật loại tăng ca (Ngày, đêm)
+    if (valLowerCase != 'pt' && obj.loaiTc.tg != loaiTcGanDay) {
+      if (loaiTcGanDay == 'ngày') obj.loaiTc.pt = phanTramTC.ngay;
+      else obj.loaiTc.pt = phanTramTC.dem;
+      obj.loaiTc.tg = loaiTcGanDay;
+    }
+    $('#divThemDuLieu').style.display = 'none';
+    setTimeout(layDuLieu, 500);
+    localStorage[`TCA-${nam}`] = JSON.stringify(data);
+  }
+}
+
+function suaDuLieu(key) {
+  obj = data[thang][key];
+  $('#tieuDeThemDuLieu').innerText = 'SỬA DỮ LIỆU';
+  $('#thuNgay').innerText = obj.thoiGian;
+  const value = $('#inputThemDuLieu');
+  value.value = obj.gtc;
+  if (obj.loaiTc.tg == 'ngày') $('#radioTcNgay').click();
+  else $('#radioTcDem').click();
+  $('#btnThemDuLieu').innerText = 'Cập nhật'
+  $('#divThemDuLieu').style.display = 'block';
+}
+
+function xoaDuLieu(key) {
+  const obj = data[thang][key];
+  if (confirm(`•••  XOÁ DỮ LIỆU  •••\n\n${obj.thoiGian}:  ${obj.gtc}  tiếng\n\nNhấn OK để xoá`)) {
+    alert(`Đã xoá:  ${obj.thoiGian}`);
+    delete data[thang][key];
+    setTimeout(layDuLieu, 500);
+    localStorage[`TCA-${nam}`] = JSON.stringify(data);
+  }
+}
+
+function thongKeThang() {
+  const dayOfMonth = countDaysOfMonth(thang, nam);
+  const apDungTienCom = localStorage['TCA-apDungTienCom'];
+  let ngay = 0,
+    gio = 0,
+    tien = 0,
+    com = 0;
+  for (const day in data[thang]) {
+    const obj = data[thang][day];
+    ngay++;
+    gio += obj.gtc;
+    com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && obj.gtc == 1.5 ? obj.com : 0;
+    tien += obj.lcb / dayOfMonth / 8 * obj.loaiTc.pt * obj.gtc;
+  }
+  alert(`•••  THỐNG KÊ THÁNG ${thang}  •••\n
+Tổng ngày t.ca:  ${ngay}  ngày\n
+Tổng giờ t.ca:     ${gio}  tiếng
+${com > 0 ? `\n----------\n
+Tiền t.ca:            ${tinhTien(tien)} đ\n
+Tiền cơm:           ${tinhTien(com)} đ\n` : ''}
+Thành tiền:         ${tinhTien(tien + com)} đ`);
+}
+
+function thongKeNam(luuDuLieu = false) {
+  const year = kiemTraLuuDuLieu(luuDuLieu);
+  let result = `${!luuDuLieu ? 'THỐNG KÊ' : 'DỮ LIỆU'} TĂNG CA ${year}\n----------\n`;
+  const apDungTienCom = localStorage['TCA-apDungTienCom'];
+  let tongNgay = 0,
+    tongGtc = 0,
+    tongTien = 0,
+    tongCom = 0;
+
+  for (let i = 1; i <= 12; i++) {
+    if (data[i] == null) continue;
+    const dayOfMonth = countDaysOfMonth(i, year);
+    let ngay = 0,
+      gio = 0,
+      tien = 0,
+      com = 0;
+    for (const day in data[i]) {
+      const obj = data[i][day];
+      tongNgay++;
+      ngay++;
+      gio += obj.gtc;
+      com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && obj.gtc == 1.5 ? obj.com : 0;
+      tien += obj.lcb / dayOfMonth / 8 * obj.loaiTc.pt * obj.gtc;
+    }
+    //result += `Th ${i >= 10 ? i : '0' + i}:  ${ngay > 0 ? `${ngay} ngày  •  ${gio} tiếng  •  ${tinhTien(tien + com)} đ\n` : '\n'}`;
+    tongGtc += gio;
+    tongTien += tien;
+    tongCom += com;
+    if (ngay > 0) // Tháng nào có ngày làm mới hiển thị
+      result += `Th ${i >= 10 ? i : '0' + i}:  ${ngay} ngày  •  ${gio} tiếng  •  ${tinhTien(tien + com)} đ\n`;
+  }
+
+  if (tongNgay == 0) result += '(Chưa có dữ liệu)\n';
+  result += `----------
+Tổng ngày:  ${tongNgay}  ngày
+Tổng giờ:     ${tongGtc}  tiếng
+Tổng tiền:    ${tinhTien(tongTien + tongCom)} đ`;
+
+  if (!luuDuLieu) alert(result);
+  else { // Kiểm tra lưu dữ liệu khi sang năm tiếp theo
+    localStorage[`TCA-duLieu${year}`] = result;
+    localStorage.removeItem(`TCA-${year}`);
+    localStorage.removeItem(`TCA-duLieu${nam - 4}`);
+    setTimeout(() => alert(`•••  LƯU DỮ LIỆU TĂNG CA  •••\n\nDữ liệu tăng ca ${year} đã được lưu!\n\nĐể xem lại dữ liệu tăng ca đã lưu, vào "Menu" chọn "Dữ Liệu Đã Lưu" sau đó nhập số năm có dữ liệu cần xem\n\nNhấn OK để tiếp tục`), 200);
+  }
+}
+
+function duLieuDaLuu() {
+  if (localStorage[`TCA-duLieu${nam - 1}`] != null || localStorage[`TCA-duLieu${nam - 2}`] != null || localStorage[`TCA-duLieu${nam - 3}`] != null) {
+    const year = prompt(`•••  DỮ LIỆU ĐÃ LƯU  •••\n
+Năm  ${nam - 1}:  ${localStorage[`TCA-duLieu${nam - 1}`] != null ? 'Có dữ liệu' : 'Không có dữ liệu'}
+Năm  ${nam - 2}:  ${localStorage[`TCA-duLieu${nam - 2}`] != null ? 'Có dữ liệu' : 'Không có dữ liệu'}
+Năm  ${nam - 3}:  ${localStorage[`TCA-duLieu${nam - 3}`] != null ? 'Có dữ liệu' : 'Không có dữ liệu'}\n
+Chọn năm có dữ liệu cần xem:`, nam - 1);
+    if (year != null) {
+      if (!isNaN(year) && parseInt(year) >= nam - 3) {
+        if (localStorage[`TCA-duLieu${year}`] != null)
+          alert(localStorage[`TCA-duLieu${year}`]);
+        else {
+          alert(`Không có dữ liệu năm ${year}`);
+          duLieuDaLuu();
+        }
+      } else {
+        alert('Giá trị nhập vào không hợp lệ!');
+        duLieuDaLuu();
+      }
+    }
+  } else alert(`•••  THÔNG BÁO HỆ THỐNG  •••\n\nKhông có dữ liệu!\n\nKhi hết tháng 12 năm ${nam}, hệ thống sẽ tự động lưu dữ liệu (trong phạm vi 3 năm) để xem lại khi cần`);
+}
+
+function suaLuongCB() {
+  const lcb = prompt('•••  THAY ĐỔI LƯƠNG CƠ BẢN  •••\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại hoặc nhấn OK để tiếp tục', `${localStorage['TCA-lcb'] == null ? 6397500 : localStorage['TCA-lcb']}`);
+  if (lcb != null) {
+    if (!isNaN(lcb) && parseInt(lcb) > 0) {
+      if (confirm(`Lương cơ bản vừa nhập là:  ${tinhTien(parseInt(lcb))} đ\n\nNhấn OK để xác nhận`)) {
+        alert(`Lương cơ bản mới là:  ${tinhTien(parseInt(lcb))} đ`);
+        $('#thLcb').innerText = `Lương cơ bản: ${tinhTien(parseInt(lcb))} đ`;
+        localStorage['TCA-lcb'] = lcb;
+        const month = today.getMonth() + 1,
+          day = today.getDate();
+        if (data[month][day] != null) {
+          data[month][day].lcb = parseInt(lcb);
+          setTimeout(layDuLieu, 500);
+          localStorage[`TCA-${nam}`] = JSON.stringify(data);
+        }
+      } else alert('Chưa thay đổi lương cơ bản!');
+    } else {
+      alert('Lưu ý:  Lương cơ bản phải là giá trị số và lớn hơn 0');
+      suaLuongCB();
+    }
+  }
+}
+
+// Sao lưu, khôi phục
+function saoLuuDuLieu() {
+  if (localStorage[`TCA-${nam}`] != null) {
+    const check = confirm(`•••  SAO LƯU DỮ LIỆU  •••\n\nHệ thống sẽ tạo một bản sao lưu bao gồm tất cả dữ liệu năm ${nam}\n\nKiểu sao lưu:  Tệp tin tải về\nTên tệp tin:  TangCa_${nam}\nĐịnh dạng:  Json\n\nNhấn OK để tiếp tục`);
+    if (check) {
+      const backupObj = {
+        year: nam,
+        data: data, //JSON.parse(localStorage[`TCA-${nam}`]),
+        coChu: localStorage['TCA-coChu'],
+        lcb: localStorage['TCA-lcb'],
+        phanTramTc: phanTramTC, //JSON.parse(localStorage['TCA-phanTramTc']),
+        ngayTrongThang: ngayTrongThang, // localStorage['TCA-ngayTrongThang'],
+        gtcGanDay: localStorage['TCA-gtcGanDay'],
+        loaiTcGanDay: loaiTcGanDay,
+        tienCom: localStorage['TCA-tienCom'],
+        apDungTienCom: localStorage['TCA-apDungTienCom'],
+        duLieuCu1: localStorage[`TCA-duLieu${nam-1}`],
+        duLieuCu2: localStorage[`TCA-duLieu${nam-2}`],
+        duLieuCu3: localStorage[`TCA-duLieu${nam-3}`],
+      };
+      const file = new Blob([JSON.stringify(backupObj)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(file);
+      a.download = `TangCa_${nam}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href); // Giải phóng bộ nhớ
+    }
+  } else alert('Chưa có dữ liệu để sao lưu!');
+}
+
+let fileUpload;
+$('#inputUpload').addEventListener('change', (e) => {
+  fileUpload = e.target.files[0];
+});
+
+function khoiPhucDuLieu() {
+  if (fileUpload != null) {
+    const fr = new FileReader();
+    fr.onload = () => {
+      try {
+        let restoreObj = JSON.parse(fr.result);
+        // Kiểm tra năm trong tệp khôi phục
+        if (restoreObj.year == nam) {
+          // Khôi phục dữ liệu tăng ca năm nay
+          data = restoreObj.data;
+          localStorage[`TCA-${nam}`] = JSON.stringify(restoreObj.data);
+          // Khôi phục các dữ liệu khác
+          localStorage['TCA-coChu'] = restoreObj.coChu;
+          localStorage['TCA-lcb'] = restoreObj.lcb;
+          localStorage['TCA-phanTramTc'] = JSON.stringify(restoreObj.phanTramTc);
+          localStorage['TCA-ngayTrongThang'] = restoreObj.ngayTrongThang;
+          localStorage['TCA-gtcGanDay'] = restoreObj.gtcGanDay;
+          localStorage['TCA-loaiTcGanDay'] = restoreObj.loaiTcGanDay;
+          localStorage['TCA-tienCom'] = restoreObj.tienCom;
+          localStorage['TCA-apDungTienCom'] = restoreObj.apDungTienCom;
+          // Khôi phục dữ liệu tăng ca cũ
+          if (restoreObj.duLieuCu1 != null)
+            localStorage[`TCA-duLieu${nam-1}`] = restoreObj.duLieuCu1;
+          if (restoreObj.duLieuCu2 != null)
+            localStorage[`TCA-duLieu${nam-2}`] = restoreObj.duLieuCu2;
+          if (restoreObj.duLieuCu3 != null)
+            localStorage[`TCA-duLieu${nam-3}`] = restoreObj.duLieuCu3;
+          /*if (restoreObj.year + 1 == nam) {
+            if (restoreObj.duLieuCu1 != null)
+              localStorage[`TCA-duLieu${nam-2}`] = restoreObj.duLieuCu1;
+            if (restoreObj.duLieuCu2 != null)
+              localStorage[`TCA-duLieu${nam-3}`] = restoreObj.duLieuCu2;
+          }
+          else if (restoreObj.year + 2 == nam) {
+            if (restoreObj.duLieuCu1 != null)
+              localStorage[`TCA-duLieu${nam-3}`] = restoreObj.duLieuCu1;
+          }*/
+          $('#divUpload').style.display = 'none';
+          alert('Khôi phục thành công!');
+          setTimeout(() => location.reload(), 500);
+          /*setFontSize(restoreObj.coChu);
+          $('#divUpload').style.display = 'none';
+          $('#inputUpload').value = null;
+          fileUpload = null;
+          setTimeout(layDuLieu, 500);*/
+        } else alert(`•••  THÔNG BÁO HỆ THỐNG  •••\n\nTệp khôi phục này là năm ${restoreObj.year}\nHãy chọn lại tệp khôi phục năm ${nam}`);
+      }
+      catch (error) {
+        alert(`•••  SỰ CỐ KHÔI PHỤC  •••\n\nTệp khôi phục chứa dữ liệu không hợp lệ hoặc đã bị thay đổi, chỉnh sửa!\n\nChi tiết mã sự cố:\n${error}`);
+      }
+    }
+    fr.readAsText(fileUpload);
+  } else alert('Hãy chọn tệp khôi phục trước!');
+}
+
+function tinhTien(num) {
+  return Intl.NumberFormat().format(Math.floor(num));
+}
+
+async function nhatKyPhienBan() {
+  const verText = await fetch('version.txt').then(v => v.text());
+  popUpThongBao(`${phienBan} ${ngayCapNhat}${noiDungCapNhat}\n\n${verText}`);
+}
+
+// Xem thông báo phiên bản khi click vào thẻ p (id: vs)
+$('#version').onclick = () => setTimeout(nhatKyPhienBan, 200);
+
+//====== Tăng ca v2 ======
+function radioTcClick(value) { loaiTcGanDay = value; }
+
+function luuCaiDat() {
+  const coChu = $('#inputCoChu');
+  const tcNgay = $('#inputTcNgay');
+  const tcDem = $('#inputTcDem');
+  const ngayTrogThag = $('#inputNgayTrongThang');
+  const tienCom = $('#inputTienCom');
+
+  if (!isNaN(coChu.value) && parseInt(coChu.value) >= 10 && parseInt(coChu.value) <= 20) {
+    if (coChu.value != localStorage['TCA-coChu']) {
+      setTimeout(() => setFontSize(coChu.value), 200);
+      localStorage['TCA-coChu'] = coChu.value;
+    }
+  } else return alert('Cỡ chữ chỉ trong phạm vi từ 10 - 20');
+
+  if (!isNaN(tcNgay.value) && parseFloat(tcNgay.value) > 0) {
+    if (tcNgay.value != phanTramTC.ngay) {
+      phanTramTC.ngay = parseFloat(tcNgay.value);
+      localStorage['TCA-phanTramTc'] = JSON.stringify({ ngay: parseFloat(tcNgay.value), dem: phanTramTC.dem });
+      const month = today.getMonth() + 1,
+        day = today.getDate();
+      if (data[month][day] != null && data[month][day].loaiTc.tg == 'ngày') {
+        data[month][day].loaiTc.pt = phanTramTC.ngay;
+        setTimeout(layDuLieu, 500);
+        localStorage[`TCA-${nam}`] = JSON.stringify(data);
+      }
+    }
+  } else return alert('Giá trị tăng ca ngày không hợp lệ');
+
+  if (!isNaN(tcDem.value) && parseFloat(tcDem.value) > 0) {
+    if (tcDem.value != phanTramTC.dem) {
+      phanTramTC.dem = parseFloat(tcDem.value);
+      localStorage['TCA-phanTramTc'] = JSON.stringify({ ngay: phanTramTC.ngay, dem: parseFloat(tcDem.value) });
+      const month = today.getMonth() + 1,
+        day = today.getDate();
+      if (data[month][day] != null && data[month][day].loaiTc.tg == 'đêm') {
+        data[month][day].loaiTc.pt = phanTramTC.dem;
+        setTimeout(layDuLieu, 500);
+        localStorage[`TCA-${nam}`] = JSON.stringify(data);
+      }
+    }
+  } else return alert('Giá trị tăng ca đêm không hợp lệ');
+
+  if (!isNaN(ngayTrogThag.value)) {
+    if (ngayTrogThag.value != ngayTrongThang) {
+      if (ngayTrogThag.value != null && parseInt(ngayTrogThag.value) > 0) {
+        ngayTrongThang = parseInt(ngayTrogThag.value);
+        localStorage['TCA-ngayTrongThang'] = ngayTrogThag.value;
+      } else {
+        ngayTrongThang = 0;
+        localStorage['TCA-ngayTrongThang'] = '0';
+      }
+      setTimeout(layDuLieu, 500);
+    }
+  } else return alert('Giá trị ngày trong tháng không hợp lệ');
+
+  if (!isNaN(tienCom.value) && parseInt(tienCom.value) > 0) {
+    if (tienCom.value != localStorage['TCA-tienCom']) {
+      localStorage['TCA-tienCom'] = tienCom.value;
+      const month = today.getMonth() + 1,
+        day = today.getDate();
+      if (data[month][day] != null) {
+        data[month][day].com = parseInt(tienCom.value);
+        localStorage[`TCA-${nam}`] = JSON.stringify(data);
+      }
+      setTimeout(layDuLieu, 200);
+    }
+    else if (localStorage['TCA-apDungTienCom'] == '0') {
+      localStorage['TCA-apDungTienCom'] = '1';
+      setTimeout(layDuLieu, 200);
+    }
+  }
+  else if (tienCom.value == '0' || tienCom.value == '') {
+    if (tienCom.value != localStorage['TCA-tienCom']) {
+      localStorage['TCA-apDungTienCom'] = '0';
+      setTimeout(layDuLieu, 200);
+    }
+  } else return alert('Giá trị tiền cơm không hợp lệ!');
+
+  $('#divCaiDat').style.display = 'none';
+}

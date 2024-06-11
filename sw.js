@@ -1,1 +1,65 @@
-const _0x16099d=_0xfc83;function _0x464c(){let t=["fetch","waitUntil","clone","keys","639372sjrock","18112LbrRzz","addEventListener","map","70apuxZt","675ODigGS","TangCa-v","request","version.txt","respondWith","icon.png","skipWaiting","4301760xWpjor","addAll","activate","27372ZWWOHA","claim","761123ZItTVu","clients","open","471020mXLePw","6090354pAJwMF","match","index.html","delete","2401XLPkMc","style.css","1apTHRD"];return(_0x464c=function(){return t})()}!function(t,e){let a=_0xfc83,n=t();for(;;)try{let $=parseInt(a(356))/1*(-parseInt(a(349))/2)+parseInt(a(361))/3+-parseInt(a(344))/4*(-parseInt(a(366))/5)+-parseInt(a(341))/6+-parseInt(a(354))/7*(parseInt(a(362))/8)+parseInt(a(350))/9+-parseInt(a(365))/10*(-parseInt(a(346))/11);if(568964===$)break;n.push(n.shift())}catch(c){n.push(n.shift())}}(_0x464c,568964);const version="0.9",cacheName=_0x16099d(367)+"0.9",contentToCache=[_0x16099d(352),_0x16099d(355),"main.js",_0x16099d(337),"bg.jpg",_0x16099d(339)];function _0xfc83(t,e){let a=_0x464c();return(_0xfc83=function(t,e){return a[t-=337]})(t,e)}self[_0x16099d(363)]("install",t=>{let e=_0x16099d;self[e(340)](),t[e(358)]((async()=>{let t=e;await (await caches[t(348)](cacheName))[t(342)](contentToCache)})())}),self.addEventListener(_0x16099d(343),t=>{let e=_0x16099d;t[e(358)]((async()=>{let t=e;await Promise.all((await caches[t(360)]())[t(364)](async e=>{let a=t;e!==cacheName&&await caches[a(353)](e)}))})()),self[e(347)][e(345)]()}),self.addEventListener(_0x16099d(357),t=>{let e=_0x16099d;t[e(338)]((async()=>{let a=e,n=await caches[a(351)](t.request);if(n)return n;let $=await fetch(t[a(368)]);return await (await caches[a(348)](cacheName)).put(t[a(368)],$[a(359)]()),$})())});
+// Đăng ký Service Worker: Đặt sau thẻ script (main) trong html, hoặc cuối file main.js
+/*window.onload = async () => {
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('sw.js');
+      console.log('[Service Worker]: Register Complete!');
+    } catch (error) {
+      console.error('[Service Worker]: Register Failed!', error);
+    }
+  }
+  else console.log('This browser does not support Service Worker!');
+}*/
+
+// Phiên bản bộ đệm
+const version = '0.9'; // 10.06.2024
+// Tên bộ đệm
+const cacheName = `TangCa-v${version}`;
+// Danh sách các file cần đưa vào bộ đệm
+const contentToCache = [
+  'index.html',
+  'style.css',
+  'main.js',
+  'version.txt',
+  'bg.jpg',
+  'icon.png'
+];
+
+// Đưa các file dữ liệu vào bộ đệm
+self.addEventListener('install', (e) => {
+  //console.log('[Service Worker]: Install!');
+  self.skipWaiting();
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    await cache.addAll(contentToCache);
+    //console.log('[Service Worker]: Caching All!');
+  })());
+});
+
+// Kích hoạt SW và loại bỏ bộ đệm cũ nếu phát hiện dữ liệu mới
+self.addEventListener('activate', (e) => {
+  e.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(async (cache) => {
+      if (cache !== cacheName) {
+        await caches.delete(cache);
+        //console.log(`[Service Worker]: Removing Old Cache: ${cache}`);
+      }
+    }));
+  })());
+  self.clients.claim();
+});
+
+// Trả về dữ liệu trong bộ đệm, nếu không có trả về dữ liệu từ tang web (Online) sau đó cache lại dữ liệu để sử dụng cho lần sau (Offline)
+self.addEventListener('fetch', (e) => {
+  e.respondWith((async () => {
+    const rq = await caches.match(e.request);
+    //console.log(`[Service Worker]: Fetching Resource: ${e.request.url}`);
+    if (rq) return rq;
+    const response = await fetch(e.request);
+    const cache = await caches.open(cacheName);
+    await cache.put(e.request, response.clone());
+    //console.log(`[Service Worker]: Caching New Resource: ${e.request.url}`);
+    return response;
+  })());
+});
