@@ -12,17 +12,17 @@
 }*/
 
 // Phiên bản bộ đệm
-const version = '0.8'; // 10.06.2024
+const version = '0.9'; // 10.06.2024
 // Tên bộ đệm
 const cacheName = `TangCa-v${version}`;
 // Danh sách các file cần đưa vào bộ đệm
 const contentToCache = [
+  'bg.jpg',
+  'icon.png',
   'index.html',
   'style.css',
   'main.js',
-  'version.txt',
-  'bg.jpg',
-  'icon.png'
+  'version.txt'
 ];
 
 // Đưa các file dữ liệu vào bộ đệm

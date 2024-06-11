@@ -1,8 +1,10 @@
-// Kiểm tra nếu có SW mới thì reload lại trang
-navigator.serviceWorker.oncontrollerchange = () => location.reload();
+// Kiểm tra nếu có SW mới và đã từng sử dụng thì reload lại trang
+navigator.serviceWorker.oncontrollerchange = () => {
+  if (localStorage['TCA-lcb'] != null) location.reload();
+}
 
 // Phiên bản ứng dụng
-const phienBan = '0.8';
+const phienBan = '0.9';
 const ngayCapNhat = '(10.06.2024)';
 // Nội dung cập nhật
 const noiDungCapNhat = `
@@ -67,7 +69,7 @@ let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần tră
     setTimeout(() => alert(`•••  CHÀO MỪNG TĂNG CA ${nam}  •••\n
   1. Đề xuất sử dụng trình duyệt Chrome cho Android và Safari cho IOS. Tránh sử dụng các trình duyệt Web được tích hợp trong các ứng dụng mạng xã hội như: Facebook Messenger, Zalo v.v.. vì có thể sẽ bị lỗi hoặc mất dữ liệu không mong muốn\n
   2. Dữ liệu tăng ca được lưu trong 'Local Storage' (một Api lưu dữ liệu cục bộ trên trình duyệt Web này), nếu xoá dữ liệu trang Web của trình duyệt này, tất cả dữ liệu tăng ca sẽ bị mất, riêng lịch sử duyệt Web hoặc dữ liệu khác như: Bộ đệm hoặc các cài đặt trang Web bị xoá sẽ không ảnh hưởng đến dữ liệu đã lưu\n
-  3. Tất cả dữ liệu người dùng được lưu cố định trên trình duyệt Web này, nếu sử dụng một trình duyệt Web khác hoặc tab riêng tư để truy cập sẽ không tìm thấy dữ liệu đã được lưu trước đó`), 200);
+  3. Tất cả dữ liệu người dùng được lưu cố định trên trình duyệt Web này, nếu sử dụng một trình duyệt Web khác hoặc tab riêng tư để truy cập sẽ không tìm thấy dữ liệu đã được lưu trước đó`), 1000);
   }
 
   // Cỡ chữ ban đầu
@@ -137,7 +139,7 @@ function setFontSize(sizes = 14) {
 function popUpThongBao(text) {
   document.body.style.overflow = 'hidden';
   $('#divThongBao').style.display = 'block';
-  $('#textThongBao').innerText = `\n${text}\n\n`;
+  $('#textThongBao').innerText = text;
 }
 
 function thayDoiThang() {
@@ -269,7 +271,7 @@ function layDuLieu() {
         alert('Gợi ý:  Nhấn vào mục "Lương cơ bản" (màu xanh lá cây), để thêm lương cơ bản trước khi sử dụng!');
       else if (Object.keys(data[thang]).length == 0)
         alert('Gợi ý:  Nhấn vào mục "Thêm Dữ Liệu" để thêm giờ tăng ca!');
-    }, 2000);
+    }, 3000);
   }
 }
 

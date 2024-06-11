@@ -1,3 +1,6 @@
+0.8 (01.12.2023)
+- Cập nhật cấu trúc lưu dữ liệu mới
+
 0.7 (12.11.2023)
 - Sửa lỗi, cập nhật mã nguồn
 
