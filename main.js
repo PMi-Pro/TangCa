@@ -2,7 +2,7 @@
 navigator.serviceWorker.oncontrollerchange = () => location.reload();
 
 // Phiên bản ứng dụng
-const phienBan = '0.9';
+const phienBan = '0.8';
 const ngayCapNhat = '(10.06.2024)';
 // Nội dung cập nhật
 const noiDungCapNhat = `
@@ -37,7 +37,7 @@ let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần tră
   else if (phienBan != localStorage['TCA-phienBan']) {
     const oldVer = localStorage['TCA-phienBan'];
     localStorage['TCA-phienBan'] = phienBan;
-    setTimeout(() => alert(`•••  THÔNG BÁO CẬP NHẬT  •••\n\nĐã cập nhật phiên bản:  ${oldVer}  lên  ${phienBan}\n\n----------\n\nNội dung cập nhật bao gồm:${noiDungCapNhat}`), 200);
+    setTimeout(() => alert(`•••  THÔNG BÁO CẬP NHẬT  •••\n\nĐã cập nhật phiên bản:  ${oldVer}  lên  ${phienBan}\n\nNội dung cập nhật bao gồm:${noiDungCapNhat}`), 200);
   }
 
   // Kiểm tra lưu dữ liệu khi hết năm
