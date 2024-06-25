@@ -1,7 +1,10 @@
 // Kiểm tra nếu có SW mới và đã từng sử dụng thì reload lại trang
-navigator.serviceWorker.oncontrollerchange = () => {
-  if (localStorage['TCA-lcb'] != null) location.reload();
-}
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.oncontrollerchange = () => {
+    if (localStorage['TCA-lcb'] != null)
+      location.reload();
+  }
+} else setTimeout(() => alert('•••  THÔNG BÁO HỆ THỐNG  •••\n\nTrình duyệt này không hỗ trợ sử dụng ngoại tuyến'), 5000);
 
 // Phiên bản ứng dụng
 const phienBan = '0.9';
@@ -29,7 +32,7 @@ let ngay = today.getDate();
 let data; // Dữ liệu tăng ca chính
 const phanTramTC = localStorage['TCA-phanTramTc'] != null ? JSON.parse(localStorage['TCA-phanTramTc']) : { ngay: 1.5, dem: 2.15 }; // Tăng ca ngày 150%, ca đêm 215%
 let loaiTcGanDay = localStorage['TCA-loaiTcGanDay'] != null ? localStorage['TCA-loaiTcGanDay'] : 'ngày'; // Ngày, đêm
-let ngayTrongThang = localStorage['TCA-ngayTrongThang'] != null ? parseInt(localStorage['TCA-ngayTrongThang']) : 26; // Mặc định chia cho 26 ngày
+let ngayTrongThang = localStorage['TCA-ngayTrongThang'] != null ? parseInt(localStorage['TCA-ngayTrongThang']) : 0; // Mặc định 0, chia số ngày trong tháng trừ chủ nhật
 let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần trăm tăng ca, tiền cơm khi hiển thị
 
 (function appStart() {
@@ -181,7 +184,10 @@ async function menuTuyChon() {
     const ngayTrogThag = $('#inputNgayTrongThang');
     if (ngayTrongThang > 0)
       ngayTrogThag.value = ngayTrongThang;
-    else ngayTrogThag.value = null;
+    else {
+      ngayTrogThag.value = null;
+      ngayTrogThag.placeholder = `Chia cho ${countDaysOfMonth(thang, nam)} ngày`;
+    }
     $('#divCaiDat').style.display = 'block';
   }
   else if (tc.value == 'chiaSe') {
@@ -199,7 +205,7 @@ async function menuTuyChon() {
 
 // Hàm đếm số ngày trong tháng trừ chủ nhật hoặc thứ bảy
 function countDaysOfMonth(month, year, countSaturday = false) {
-  if (ngayTrongThang != 0) // 26 ngày
+  if (ngayTrongThang > 0)
     return ngayTrongThang;
   // Đến số ngày làm trong tháng
   const firstDay = new Date(year, month - 1, 1); // Tạo ngày đầu tiên của tháng
@@ -271,7 +277,7 @@ function layDuLieu() {
         alert('Gợi ý:  Nhấn vào mục "Lương cơ bản" (màu xanh lá cây), để thêm lương cơ bản trước khi sử dụng!');
       else if (Object.keys(data[thang]).length == 0)
         alert('Gợi ý:  Nhấn vào mục "Thêm Dữ Liệu" để thêm giờ tăng ca!');
-    }, 3000);
+    }, 2000);
   }
 }
 
