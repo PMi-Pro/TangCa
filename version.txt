@@ -1,3 +1,8 @@
+0.9 (10.06.2024)
+- Cập nhật giao diện người dùng
+- Phân loại tăng ca ngày, đêm
+- Bổ sung mục cài đặt chi tiết
+
 0.8 (01.12.2023)
 - Cập nhật cấu trúc lưu dữ liệu mới
 
