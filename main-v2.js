@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
 } else setTimeout(() => alert('•••  THÔNG BÁO HỆ THỐNG  •••\n\nTrình duyệt này không hỗ trợ sử dụng ngoại tuyến'), 5000);
 
 // Phiên bản ứng dụng
-const phienBan = '0.9.1';
+const phienBan = '1.0.0';
 const ngayCapNhat = '(22.07.2024)';
 // Nội dung cập nhật
 const noiDungCapNhat = `
@@ -216,11 +216,12 @@ async function menuTuyChon() {
 // Hàm đếm số ngày trong tháng trừ chủ nhật hoặc thứ bảy
 function countDaysOfMonth(month, year, countSaturday = false) {
   if (ngayTrongThang > 0)
-    return ngayTrongThang;
+    return ngayTrongThang; // Trả về ngày được nhập thủ công trong cài đặt
   // Đến số ngày làm trong tháng
-  const firstDay = new Date(year, month - 1, 1); // Tạo ngày đầu tiên của tháng
-  const lastDay = new Date(year, month, 0); // Tạo ngày cuối cùng của tháng 
-  let count = 0; // Khởi tạo biến đếm 
+  const firstDay = new Date(year, month - 1, 1); // Lấy ngày đầu tiên của tháng
+  const lastDay = new Date(year, month, 0); // Lấy ngày cuối cùng của tháng
+  let count = 0; // Khởi tạo biến đếm
+  if (lastDay.getDate() > 30) count--; // Chỉ tính 30 ngày nếu tháng có 31 (LongFa)
   while (firstDay <= lastDay) { // Lặp qua từng ngày trong tháng
     // Nếu không phải chủ nhật (0) và bỏ qua ngày thứ bảy nếu countSaturday là true
     if (firstDay.getDay() !== 0 && countSaturday ? firstDay.getDay() !== 6 : firstDay.getDay() !== 0) {
