@@ -1,3 +1,6 @@
+1.0.0 (22.07.2024)
+- Bản chính thức
+
 0.9 (10.06.2024)
 - Cập nhật giao diện người dùng
 - Phân loại tăng ca ngày, đêm
@@ -25,4 +28,4 @@
 - Hỗ trợ sử dụng ngoại tuyến
 
 0.1 (06.08.2023)
-- Bản thử nghiệm
+- Bản thử nghiệm đầu tiên

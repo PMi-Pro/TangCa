@@ -4,11 +4,11 @@ if ('serviceWorker' in navigator) {
     if (localStorage['TCA-lcb'] != null)
       location.reload();
   }
-} else setTimeout(() => alert('•••  THÔNG BÁO HỆ THỐNG  •••\n\nTrình duyệt này không hỗ trợ sử dụng ngoại tuyến'), 5000);
+} else console.log('Trình duyệt này không hỗ trợ Service Worker!');
 
 // Phiên bản ứng dụng
-const phienBan = '1.0.0';
-const ngayCapNhat = '(22.07.2024)';
+const phienBan = '1.0.1';
+const ngayCapNhat = '(20.09.2024)';
 // Nội dung cập nhật
 const noiDungCapNhat = `
 - Cập nhật, sửa đổi dữ liệu`;
@@ -17,7 +17,7 @@ const noiDungCapNhat = `
 const $ = document.querySelector.bind(document); // Viết ngắn gọn của hàm querySelector
 $('#version').innerText = `Phiên bản ${phienBan}`;
 const today = new Date();
-$('#tuyChon')[1].innerText += ` ${today.getFullYear()}`;
+$('#tuyChon')[2].innerText += ` ${today.getFullYear()}`;
 $('#chonNgay').value = `${today.getFullYear()}-${('0' + (today.getMonth() + 1)).slice(-2)}-${('0' + today.getDate()).slice(-2)}`;
 const chonThang = $('#chonThang');
 chonThang.value = today.getMonth() + 1;
@@ -83,30 +83,6 @@ let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần tră
 
   // Hiển thị lương cơ bản của thẻ th trong tbody
   $('#thLcb').innerText = `Lương cơ bản: ${localStorage['TCA-lcb'] != null ? tinhTien(parseInt(localStorage['TCA-lcb'])) + ' đ' : 'Chưa có'}`;
-
-  // Cập nhật phiên bản ca đêm 0.9
-  if (localStorage['TCA-loaiTcGanDay'] == null && localStorage[`TCA-${nam}`] != null) {
-    localStorage['TCA-loaiTcGanDay'] = loaiTcGanDay;
-    for (let i = thang; i >= 1; i--) {
-      if (data[i] == null) continue;
-      for (const day in data[i]) {
-        data[i][day].loaiTc = { pt: phanTramTC.ngay, tg: loaiTcGanDay };
-      }
-    }
-    localStorage[`TCA-${nam}`] = JSON.stringify(data);
-  }
-
-  if (thang == 7 && Object.entries(data[thang]).length > 0) {
-    let update = false;
-    const lcb = parseInt(localStorage['TCA-lcb']);
-    for (const day in data[thang]) {
-      if (data[thang][day].lcb == lcb) continue;
-      data[thang][day].lcb = lcb;
-      update = true;
-    }
-    if (update)
-      localStorage[`TCA-${nam}`] = JSON.stringify(data);
-  }
 
   layDuLieu();
 })();
@@ -175,12 +151,13 @@ function thayDoiNgay(e) {
 
 async function menuTuyChon() {
   const tc = $('#tuyChon');
-  if (tc.value == 'thongKe') thongKeNam();
+  if (tc.value == 'thongKeThangNay') thongKeThang();
+  else if (tc.value == 'thongKe') thongKeNam();
   else if (tc.value == 'duLieuDaLuu') duLieuDaLuu();
   else if (tc.value == 'saoLuuDuLieu') saoLuuDuLieu();
   else if (tc.value == 'khoiPhucDuLieu') {
-    if (confirm('•••  KHÔI PHỤC DỮ LIỆU  •••\n\nLưu ý:  Tất cả dữ liệu hiện tại sẽ được thay thế bằng dữ liệu trong tệp khôi phục\n\nNhấn OK và chọn tệp khôi phục'))
-      setTimeout(() => $('#divUpload').style.display = 'block', 200);
+    if (confirm(`•••  KHÔI PHỤC DỮ LIỆU  •••\n\nLưu ý:  Tất cả dữ liệu hiện tại sẽ được thay thế bằng dữ liệu trong tệp khôi phục và tệp dữ liệu khôi phục phải là năm ${nam}\n\nNhấn OK và chọn tệp khôi phục`))
+      setTimeout(() => $('#divUpload').style.display = 'block', 150);
   }
   else if (tc.value == 'caiDat') {
     // Hiển thị các giá trị trong Div cài đặt
@@ -198,7 +175,7 @@ async function menuTuyChon() {
       ngayTrogThag.value = null;
       ngayTrogThag.placeholder = `Chia cho ${countDaysOfMonth(thang, nam)} ngày`;
     }
-    $('#divCaiDat').style.display = 'block';
+    setTimeout(() => $('#divCaiDat').style.display = 'block', 150);
   }
   else if (tc.value == 'chiaSe') {
     const shareData = {
@@ -209,14 +186,15 @@ async function menuTuyChon() {
     };
     try { await navigator.share(shareData); } catch {}
   }
-  else if (tc.value == 'thongTin') alert(`•••  THÔNG TIN WEB TĂNG CA  •••\n\nPhiên bản:  ${phienBan} ${ngayCapNhat}\n\nTác giả:  Nguyễn Phương Minh\n\nHỗ trợ, góp ý:  0969.442.210 (có Zalo)`);
+  else if (tc.value == 'nhatKyPhienBan') nhatKyPhienBan();
+  else if (tc.value == 'thongTin') alert(`•••  THÔNG TIN WEB TĂNG CA  •••\n\nPhiên bản:  ${phienBan} ${ngayCapNhat}\n\nTác giả:  Nguyễn Phương Minh\n\nHỗ trợ, góp ý:  0969.442.210 (Có Zalo)`);
   tc.value = 'menu';
 }
 
 // Hàm đếm số ngày trong tháng trừ chủ nhật hoặc thứ bảy
 function countDaysOfMonth(month, year, countSaturday = false) {
   if (ngayTrongThang > 0)
-    return ngayTrongThang; // Trả về ngày được nhập thủ công trong cài đặt
+    return ngayTrongThang;
   // Đến số ngày làm trong tháng
   const firstDay = new Date(year, month - 1, 1); // Lấy ngày đầu tiên của tháng
   const lastDay = new Date(year, month, 0); // Lấy ngày cuối cùng của tháng
@@ -246,7 +224,7 @@ function chotNgayTC() {
 
 // Kiểm tra thời gian trong phạm vi tính tiền cơm
 function kiemTraTinhTienCom(thoiGian) {
-  if (thoiGian == 1.5 || thoiGian == 2.5)
+  if (thoiGian >= 1 && thoiGian <= 2.5)
     return true;
   return false;
 }
@@ -271,8 +249,8 @@ function layDuLieu() {
 
     tbody.innerHTML += `
       <tr>
-        <td onclick='suaDuLieu(${key})'>${obj.thoiGian}${obj.loaiTc.tg != 'ngày' ? ' • (Đêm)' : ''}${xemDayDu ? `<br><h5 style='margin: 2px; color: brown;'>Lcb: ${tinhTien(obj.lcb)} • Pt: ${obj.loaiTc.pt}</h5>` : ''}</td>
-        <td onclick='xoaDuLieu(${key})'>${obj.gtc}${xemDayDu && apDungTienCom == '1' && obj.gtc == 1.5 ? `<br><h5 style='margin: 2px; color: brown;'>Cơm: ${tinhTien(obj.com)}</h5>` : ''}</td>
+        <td onclick='setTimeout(() => suaDuLieu(${key}), 100);'>${obj.thoiGian}${obj.loaiTc.tg != 'ngày' ? ' • (Đêm)' : ''}${xemDayDu ? `<br><h5 style='margin: 2px; color: brown;'>Lcb: ${tinhTien(obj.lcb)} • Pt: ${obj.loaiTc.pt}</h5>` : ''}</td>
+        <td onclick='xoaDuLieu(${key})'>${obj.gtc}${xemDayDu && com > 0 ? `<br><h5 style='margin: 2px; color: brown;'>Cơm: ${tinhTien(obj.com)}</h5>` : ''}</td>
       </tr>`;
 
     if (key == chotNgayTangCa) {
@@ -290,12 +268,12 @@ function layDuLieu() {
   }
   else {
     $('#thGioTC').innerText = `0 tiếng`;
-    tbody.innerHTML = `<td onclick='themDuLieu()' colspan='2'>Tháng ${thang} chưa có dữ liệu</td>`;
+    tbody.innerHTML = `<td onclick='setTimeout(themDuLieu, 100);' colspan='2'>Tháng ${thang} chưa có dữ liệu</td>`;
     setTimeout(() => {
       if (localStorage['TCA-lcb'] == null)
         alert('Gợi ý:  Nhấn vào mục "Lương cơ bản" (màu xanh lá cây), để thêm lương cơ bản trước khi sử dụng!');
-      else if (Object.keys(data[thang]).length == 0)
-        alert('Gợi ý:  Nhấn vào mục "Thêm Dữ Liệu" để thêm giờ tăng ca!');
+      else if (ngay == 0 && thang == today.getMonth() + 1)
+        alert('Gợi ý:  Nhấn vào mục "Thêm dữ liệu" ở bên dưới để thêm giờ tăng ca!');
     }, 2000);
   }
 }
@@ -313,7 +291,7 @@ function themDuLieu() {
     } else alert(`Dữ liệu đã tồn tại:\n\n${tenThu} • Ngày ${ngay}:  ${data[thang][ngay].gtc}  tiếng`);
   }
   else {
-    const lcb = prompt('•••  THÔNG BÁO HỆ THỐNG  •••\n\nHệ thống yêu cầu có lương cơ bản để tính toán tiền tăng ca, vui lòng nhập lương cơ bản trước khi sử dụng (bắt buộc)\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại hoặc nhấn OK để tiếp tục', 6397500);
+    const lcb = prompt('•••  THÔNG BÁO HỆ THỐNG  •••\n\nHệ thống yêu cầu có lương cơ bản để tính toán tiền tăng ca, vui lòng nhập lương cơ bản trước khi sử dụng (bắt buộc)\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại và nhấn OK để tiếp tục', 6647500);
     if (lcb != null) {
       if (!isNaN(lcb) && parseInt(lcb) > 0) {
         if (confirm(`Lương cơ bản vừa nhập là:  ${tinhTien(parseInt(lcb))} đ\n\nNhấn OK để xác nhận`)) {
@@ -412,7 +390,7 @@ function suaDuLieu(key) {
 
 function xoaDuLieu(key) {
   const obj = data[thang][key];
-  if (confirm(`•••  XOÁ DỮ LIỆU  •••\n\n${obj.thoiGian}:  ${obj.gtc}  tiếng\n\nNhấn OK để xoá`)) {
+  if (confirm(`•••  XOÁ DỮ LIỆU  •••\n\n${obj.thoiGian}:  ${obj.gtc}  tiếng${obj.loaiTc.tg == 'ngày' ? '' : ' (Đêm)'}\n\nNhấn OK để xoá`)) {
     alert(`Đã xoá:  ${obj.thoiGian}`);
     delete data[thang][key];
     setTimeout(layDuLieu, 500);
@@ -431,7 +409,7 @@ function thongKeThang() {
     const obj = data[thang][day];
     ngay++;
     gio += obj.gtc;
-    com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && obj.gtc == 1.5 ? obj.com : 0;
+    com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && kiemTraTinhTienCom(obj.gtc) ? obj.com : 0;
     tien += obj.lcb / dayOfMonth / 8 * obj.loaiTc.pt * obj.gtc;
   }
   alert(`•••  THỐNG KÊ THÁNG ${thang}  •••\n
@@ -464,7 +442,7 @@ function thongKeNam(luuDuLieu = false) {
       tongNgay++;
       ngay++;
       gio += obj.gtc;
-      com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && obj.gtc == 1.5 ? obj.com : 0;
+      com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && kiemTraTinhTienCom(obj.gtc) ? obj.com : 0;
       tien += obj.lcb / dayOfMonth / 8 * obj.loaiTc.pt * obj.gtc;
     }
     //result += `Th ${i >= 10 ? i : '0' + i}:  ${ngay > 0 ? `${ngay} ngày  •  ${gio} tiếng  •  ${tinhTien(tien + com)} đ\n` : '\n'}`;
@@ -514,7 +492,7 @@ Chọn năm có dữ liệu cần xem:`, nam - 1);
 }
 
 function suaLuongCB() {
-  const lcb = prompt('•••  THAY ĐỔI LƯƠNG CƠ BẢN  •••\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại hoặc nhấn OK để tiếp tục', `${localStorage['TCA-lcb'] == null ? 6397500 : localStorage['TCA-lcb']}`);
+  const lcb = prompt('•••  THAY ĐỔI LƯƠNG CƠ BẢN  •••\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại và nhấn OK để tiếp tục', `${localStorage['TCA-lcb'] == null ? 6647500 : localStorage['TCA-lcb']}`);
   if (lcb != null) {
     if (!isNaN(lcb) && parseInt(lcb) > 0) {
       if (confirm(`Lương cơ bản vừa nhập là:  ${tinhTien(parseInt(lcb))} đ\n\nNhấn OK để xác nhận`)) {
@@ -625,20 +603,12 @@ function khoiPhucDuLieu() {
       }
     }
     fr.readAsText(fileUpload);
-  } else alert('Hãy chọn tệp khôi phục trước!');
+  } else alert(`Tệp chưa được chọn!\n\nHãy chọn tệp "TangCa_${nam}.json" trước, sau đó nhấn chọn "Khôi phục"`);
 }
 
 function tinhTien(num) {
   return Intl.NumberFormat().format(Math.floor(num));
 }
-
-async function nhatKyPhienBan() {
-  const verText = await fetch('version.txt').then(v => v.text());
-  popUpThongBao(`${phienBan} ${ngayCapNhat}${noiDungCapNhat}\n\n${verText}`);
-}
-
-// Xem thông báo phiên bản khi click vào thẻ p (id: vs)
-$('#version').onclick = () => setTimeout(nhatKyPhienBan, 200);
 
 //====== Tăng ca v2 ======
 function radioTcClick(value) { loaiTcGanDay = value; }
@@ -732,3 +702,11 @@ function luuCaiDat() {
 
   $('#divCaiDat').style.display = 'none';
 }
+
+async function nhatKyPhienBan() {
+  const verText = await fetch('version.txt').then(v => v.text());
+  setTimeout(() => popUpThongBao(`${phienBan} ${ngayCapNhat}${noiDungCapNhat}\n\n${verText}`), 100);
+}
+
+// Xem thông báo phiên bản khi click vào thẻ p (id: vs)
+$('#version').onclick = () => setTimeout(nhatKyPhienBan, 200);
