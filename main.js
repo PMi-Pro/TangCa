@@ -7,11 +7,11 @@ if ('serviceWorker' in navigator) {
 } else console.log('Trình duyệt này không hỗ trợ Service Worker!');
 
 // Phiên bản ứng dụng
-const phienBan = '1.0.1';
-const ngayCapNhat = '(20.09.2024)';
+const phienBan = '1.0.2';
+const ngayCapNhat = '(24.12.2024)';
 // Nội dung cập nhật
 const noiDungCapNhat = `
-- Cập nhật, sửa đổi dữ liệu`;
+- Cập nhật một vài tính năng hệ thống`;
 
 // Các biến khởi tạo ban đầu
 const $ = document.querySelector.bind(document); // Viết ngắn gọn của hàm querySelector
@@ -27,11 +27,11 @@ const thu = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm',
 let thang = chonThang.value;
 let tenThu = thu[today.getDay()];
 let ngay = today.getDate();
-let data; // Dữ liệu tăng ca chính
+let data; // Dữ liệu tăng (Main data)
 const phanTramTC = localStorage['TCA-phanTramTc'] != null ? JSON.parse(localStorage['TCA-phanTramTc']) : { ngay: 1.5, dem: 2.15 }; // Tăng ca ngày 150%, ca đêm 215%
 let loaiTcGanDay = localStorage['TCA-loaiTcGanDay'] != null ? localStorage['TCA-loaiTcGanDay'] : 'ngày'; // Ngày, đêm
 let ngayTrongThang = localStorage['TCA-ngayTrongThang'] != null ? parseInt(localStorage['TCA-ngayTrongThang']) : 0; // Mặc định 0, chia số ngày trong tháng trừ chủ nhật
-let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần trăm tăng ca, tiền cơm khi hiển thị
+let debug = false; // Gỡ lỗi, xem đầy đủ dữ liệu bao gồm lcb, phần trăm tăng ca, tiền cơm khi hiển thị
 
 (function appStart() {
   // Thông báo nếu có phiên bản mới
@@ -55,7 +55,7 @@ let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần tră
   // Lấy dữ liệu ban đầu nếu có
   if (localStorage[`TCA-${nam}`] != null) {
     data = JSON.parse(localStorage[`TCA-${nam}`]);
-    if (data[thang] == null)
+    if (data[thang] == null) // Nếu tháng hiện tại chưa có tạo một đối tượng rỗng để tránh lỗi
       data[thang] = {}
   }
   else { // Tạo mới dữ liệu
@@ -84,7 +84,7 @@ let xemDayDu = false; // Xem đầy đủ dữ liệu bao gồm lcb, phần tră
   // Hiển thị lương cơ bản của thẻ th trong tbody
   $('#thLcb').innerText = `Lương cơ bản: ${localStorage['TCA-lcb'] != null ? tinhTien(parseInt(localStorage['TCA-lcb'])) + ' đ' : 'Chưa có'}`;
 
-  layDuLieu();
+  setTimeout(layDuLieu);
 })();
 
 // Hàm kiểm tra dữ liệu cũ khi sang năm tiếp theo
@@ -139,7 +139,7 @@ function thayDoiThang() {
   ngay = date.getDate();
   if (data[thang] == null)
     data[thang] = {};
-  layDuLieu();
+  setTimeout(layDuLieu);
 }
 
 function thayDoiNgay(e) {
@@ -151,13 +151,13 @@ function thayDoiNgay(e) {
 
 async function menuTuyChon() {
   const tc = $('#tuyChon');
-  if (tc.value == 'thongKeThangNay') thongKeThang();
-  else if (tc.value == 'thongKe') thongKeNam();
+  if (tc.value == 'thongKeThangNay') setTimeout(thongKeThang);
+  else if (tc.value == 'thongKe') setTimeout(thongKeNam);
   else if (tc.value == 'duLieuDaLuu') duLieuDaLuu();
   else if (tc.value == 'saoLuuDuLieu') saoLuuDuLieu();
   else if (tc.value == 'khoiPhucDuLieu') {
     if (confirm(`•••  KHÔI PHỤC DỮ LIỆU  •••\n\nLưu ý:  Tất cả dữ liệu hiện tại sẽ được thay thế bằng dữ liệu trong tệp khôi phục và tệp dữ liệu khôi phục phải là năm ${nam}\n\nNhấn OK và chọn tệp khôi phục`))
-      setTimeout(() => $('#divUpload').style.display = 'block', 150);
+      setTimeout(() => $('#divUpload').style.display = 'block', 200);
   }
   else if (tc.value == 'caiDat') {
     // Hiển thị các giá trị trong Div cài đặt
@@ -177,6 +177,7 @@ async function menuTuyChon() {
     }
     setTimeout(() => $('#divCaiDat').style.display = 'block', 150);
   }
+  else if (tc.value == 'tinhNangKhac') tinhNangKhac();
   else if (tc.value == 'chiaSe') {
     const shareData = {
       title: 'Chia sẽ web tăng ca',
@@ -186,51 +187,49 @@ async function menuTuyChon() {
     };
     try { await navigator.share(shareData); } catch {}
   }
-  else if (tc.value == 'nhatKyPhienBan') nhatKyPhienBan();
+  else if (tc.value == 'nhatKyPhienBan') setTimeout(nhatKyPhienBan, 50);
   else if (tc.value == 'thongTin') alert(`•••  THÔNG TIN WEB TĂNG CA  •••\n\nPhiên bản:  ${phienBan} ${ngayCapNhat}\n\nTác giả:  Nguyễn Phương Minh\n\nHỗ trợ, góp ý:  0969.442.210 (Có Zalo)`);
   tc.value = 'menu';
 }
 
-// Hàm đếm số ngày trong tháng trừ chủ nhật hoặc thứ bảy
-function countDaysOfMonth(month, year, countSaturday = false) {
-  if (ngayTrongThang > 0)
-    return ngayTrongThang;
-  // Đến số ngày làm trong tháng
-  const firstDay = new Date(year, month - 1, 1); // Lấy ngày đầu tiên của tháng
-  const lastDay = new Date(year, month, 0); // Lấy ngày cuối cùng của tháng
-  let count = 0; // Khởi tạo biến đếm
-  if (lastDay.getDate() > 30) count--; // Chỉ tính 30 ngày nếu tháng có 31 (LongFa)
-  while (firstDay <= lastDay) { // Lặp qua từng ngày trong tháng
-    // Nếu không phải chủ nhật (0) và bỏ qua ngày thứ bảy nếu countSaturday là true
-    if (firstDay.getDay() !== 0 && countSaturday ? firstDay.getDay() !== 6 : firstDay.getDay() !== 0) {
-      count++; // Đếm ngày đó
+// Hàm đếm số ngày trong tháng trừ chủ nhật (hoặc thứ bảy tùy chọn)
+function countDaysOfMonth(month, year, countSaturday = true) {
+  // Lấy số ngày trong tháng
+  const daysInMonth = new Date(year, month, 0).getDate();
+  let count = 0;
+  for (let day = 1; day <= daysInMonth; day++) {
+    const date = new Date(year, month - 1, day); // month - 1 vì JS đếm tháng từ 0-11
+    const dayOfWeek = date.getDay();
+    // Đếm ngày không phải Chủ Nhật
+    if (dayOfWeek !== 0 && (countSaturday || dayOfWeek !== 6)) {
+      count++;
     }
-    firstDay.setDate(firstDay.getDate() + 1); // Tăng ngày lên 1
   }
-  return count; // Trả về tổng số ngày đếm được
+  if (count > 26) count = 26; // Nếu số ngày đếm được lớn hơn 26, thì bằng 26
+  return count;
 }
 
 // Hàm Kiểm tra chốt ngày tăng ca
 function chotNgayTC() {
-  for (let i = 16; i <= 31; i++) {
+  for (let i = 16; i <= 31; i++) { // Kiểm tra xem có các ngày lớn hơn 15 trở đi không
     if (data[thang][i] == null) continue;
-    for (let i = 15; i >= 1; i--) {
-      if (data[thang][i] == null) continue;
-      return i; // Trả về giá trị và thoát khỏi vòng lặp, hàm
+    for (let j = 15; j >= 1; j--) { // Tiếp tục kiểm tra các ngày từ 15 trở về (nếu đã có các ngày lớn hơn 15)
+      if (data[thang][j] == null) continue;
+      return j; // Trả về ngày tìm được và thoát khỏi vòng lặp, hàm
     }
   }
-  return 0; // Trả về 0 nếu các điều kiện ở trên là sai
+  return 0; // Trả về 0 nếu không tồn tại các thuộc tính 1-15 (không có các ngày 1-15)
 }
 
 // Kiểm tra thời gian trong phạm vi tính tiền cơm
 function kiemTraTinhTienCom(thoiGian) {
-  if (thoiGian >= 1 && thoiGian <= 2.5)
+  if (thoiGian <= 2.5)
     return true;
   return false;
 }
 
 function layDuLieu() {
-  const chotNgayTangCa = chotNgayTC(); // Lấy ngày chốt tăng ca
+  const chotNgayTangCa = chotNgayTC();
   const dayOfMonth = countDaysOfMonth(thang, nam);
   const apDungTienCom = localStorage['TCA-apDungTienCom'];
   tbody.innerHTML = null;
@@ -240,7 +239,6 @@ function layDuLieu() {
     chotNgay = 0,
     chotGio = 0,
     chotTien = 0;
-
   for (const [key, obj] of Object.entries(data[thang])) {
     ngay++;
     gio += obj.gtc;
@@ -249,12 +247,12 @@ function layDuLieu() {
 
     tbody.innerHTML += `
       <tr>
-        <td onclick='setTimeout(() => suaDuLieu(${key}), 100);'>${obj.thoiGian}${obj.loaiTc.tg != 'ngày' ? ' • (Đêm)' : ''}${xemDayDu ? `<br><h5 style='margin: 2px; color: brown;'>Lcb: ${tinhTien(obj.lcb)} • Pt: ${obj.loaiTc.pt}</h5>` : ''}</td>
-        <td onclick='xoaDuLieu(${key})'>${obj.gtc}${xemDayDu && com > 0 ? `<br><h5 style='margin: 2px; color: brown;'>Cơm: ${tinhTien(obj.com)}</h5>` : ''}</td>
+        <td onclick='setTimeout(() => suaDuLieu(${key}), 100);'>${obj.thoiGian}${obj.loaiTc.tg != 'ngày' ? ' • (Đêm)' : ''}${debug ? `<br><h5 style='margin: 2px; color: brown;'>Lcb: ${tinhTien(obj.lcb)} • Pt: ${obj.loaiTc.pt}</h5>` : ''}</td>
+        <td onclick='xoaDuLieu(${key})'>${obj.gtc}${debug && com > 0 ? `<br><h5 style='margin: 2px; color: brown;'>Cơm: ${tinhTien(obj.com)}</h5>` : ''}</td>
       </tr>`;
 
     if (key == chotNgayTangCa) {
-      tbody.innerHTML += `<td onclick="thongKeThang()" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 1 • ${ngay} ngày • ${gio} tiếng • ${tinhTien(tien)} đ</td>`;
+      tbody.innerHTML += `<td onclick="setTimeout(thongKeThang);" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 1 • ${ngay} ngày • ${gio} tiếng • ${tinhTien(tien)} đ</td>`;
       chotNgay = ngay;
       chotGio = gio;
       chotTien = tien;
@@ -264,7 +262,7 @@ function layDuLieu() {
   if (tbody.innerHTML != '') {
     $('#thGioTC').innerText = `${gio} tiếng • ${tinhTien(tien)} đ`;
     if (chotNgayTangCa > 0)
-      tbody.innerHTML += `<td onclick="thongKeThang()" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 2 • ${ngay - chotNgay} ngày • ${gio - chotGio} tiếng • ${tinhTien(tien - chotTien)} đ</td>`;
+      tbody.innerHTML += `<td onclick="setTimeout(thongKeThang);" colspan=2 style='color: brown; font-weight: bold; background-color: aliceblue;'>Đợt 2 • ${ngay - chotNgay} ngày • ${gio - chotGio} tiếng • ${tinhTien(tien - chotTien)} đ</td>`;
   }
   else {
     $('#thGioTC').innerText = `0 tiếng`;
@@ -278,7 +276,7 @@ function layDuLieu() {
   }
 }
 
-function themDuLieu() {
+function themDuLieu() { // Nút thêm dữ liệu trang chính
   if (localStorage['TCA-lcb'] != null) {
     if (data[thang][ngay] == null) {
       $('#tieuDeThemDuLieu').innerText = 'THÊM DỮ LIỆU';
@@ -288,9 +286,13 @@ function themDuLieu() {
       else $('#radioTcDem').click();
       $('#btnThemDuLieu').innerText = 'Thêm';
       $('#divThemDuLieu').style.display = 'block';
-    } else alert(`Dữ liệu đã tồn tại:\n\n${tenThu} • Ngày ${ngay}:  ${data[thang][ngay].gtc}  tiếng`);
+    }
+    else {
+      const obj = data[thang][ngay];
+      alert(`Dữ liệu đã có:\n\n${tenThu} • Ngày ${ngay}:  ${obj.gtc}  tiếng${obj.loaiTc.tg == 'ngày' ? '' : ' (Đêm)'}`);
+    }
   }
-  else {
+  else { // Yêu cầu lương cơ bản
     const lcb = prompt('•••  THÔNG BÁO HỆ THỐNG  •••\n\nHệ thống yêu cầu có lương cơ bản để tính toán tiền tăng ca, vui lòng nhập lương cơ bản trước khi sử dụng (bắt buộc)\n\nLưu ý:  Hãy nhập đúng lương cơ bản, nếu nhập sai khi thêm dữ liệu hệ thống tính toán, thống kê tiền tăng ca sẽ bị sai\n\nGợi ý:  Sửa lại và nhấn OK để tiếp tục', 6647500);
     if (lcb != null) {
       if (!isNaN(lcb) && parseInt(lcb) > 0) {
@@ -331,25 +333,25 @@ function btnDivThemDuLieu() {
     if (obj.gtc == value && obj.loaiTc.tg == loaiTcGanDay)
       return alert(`Hãy thay đổi dữ liệu trước khi cập nhật!`);
     else if (value.toLowerCase() == 'pmi') {
-      xemDayDu = true;
+      debug = true;
       $('#divThemDuLieu').style.display = 'none';
-      alert('Đã bật chế độ xem dữ liệu đầy đủ!');
+      alert('Đã bật chế độ gỡ lỗi!');
       setTimeout(layDuLieu, 500);
       return;
     }
-    else if (xemDayDu && valLowerCase == 'lcb' && !isNaN(val[1]) && parseInt(val[1]) > 0) {
+    else if (debug && valLowerCase == 'lcb' && !isNaN(val[1]) && parseInt(val[1]) > 0) {
       if (val[1] != obj.lcb) {
         obj.lcb = parseInt(val[1]);
         alert(`Đã cập nhật lương cơ bản!\n\n${obj.thoiGian}:  ${tinhTien(obj.lcb)} đ`);
       } else return alert('Lương cơ bản bị trùng!');
     }
-    else if (xemDayDu && valLowerCase == 'pt' && !isNaN(val[1]) && parseFloat(val[1]) > 0) {
+    else if (debug && valLowerCase == 'pt' && !isNaN(val[1]) && parseFloat(val[1]) > 0) {
       if (val[1] != obj.loaiTc.pt) {
         obj.loaiTc.pt = parseFloat(val[1]);
         alert(`Đã cập nhật phần trăm tăng ca!\n\n${obj.thoiGian}:  ${obj.loaiTc.pt}`);
       } else return alert('Phần trăm tăng ca bị trùng!');
     }
-    else if (xemDayDu && localStorage['TCA-apDungTienCom'] == '1' && obj.gtc == 1.5 && valLowerCase == 'com' && !isNaN(val[1]) && parseInt(val[1]) > 0) {
+    else if (debug && localStorage['TCA-apDungTienCom'] == '1' && obj.gtc == 1.5 && valLowerCase == 'com' && !isNaN(val[1]) && parseInt(val[1]) > 0) {
       if (val[1] != obj.com) {
         obj.com = parseInt(val[1]);
         alert(`Đã cập nhật tiền cơm!\n\n${obj.thoiGian}:  ${tinhTien(obj.com)} đ`);
@@ -412,6 +414,9 @@ function thongKeThang() {
     com += apDungTienCom == '1' && obj.loaiTc.tg == 'ngày' && kiemTraTinhTienCom(obj.gtc) ? obj.com : 0;
     tien += obj.lcb / dayOfMonth / 8 * obj.loaiTc.pt * obj.gtc;
   }
+
+  if (ngay == 0) return alert('Tháng này chưa có dữ liệu!');
+
   alert(`•••  THỐNG KÊ THÁNG ${thang}  •••\n
 Tổng ngày t.ca:  ${ngay}  ngày\n
 Tổng giờ t.ca:     ${gio}  tiếng
@@ -429,7 +434,6 @@ function thongKeNam(luuDuLieu = false) {
     tongGtc = 0,
     tongTien = 0,
     tongCom = 0;
-
   for (let i = 1; i <= 12; i++) {
     if (data[i] == null) continue;
     const dayOfMonth = countDaysOfMonth(i, year);
@@ -453,7 +457,8 @@ function thongKeNam(luuDuLieu = false) {
       result += `Th ${i >= 10 ? i : '0' + i}:  ${ngay} ngày  •  ${gio} tiếng  •  ${tinhTien(tien + com)} đ\n`;
   }
 
-  if (tongNgay == 0) result += '(Chưa có dữ liệu)\n';
+  if (tongNgay == 0) return alert('Năm hiện tại chưa có dữ liệu!');
+
   result += `----------
 Tổng ngày:  ${tongNgay}  ngày
 Tổng giờ:     ${tongGtc}  tiếng
@@ -500,6 +505,7 @@ function suaLuongCB() {
         $('#thLcb').innerText = `Lương cơ bản: ${tinhTien(parseInt(lcb))} đ`;
         localStorage['TCA-lcb'] = lcb;
         const month = today.getMonth() + 1;
+        // Cập nhật lại lcb mới cho các ngày trong tháng
         if (Object.entries(data[month]).length > 0) {
           const newLcb = parseInt(lcb);
           for (const day in data[month]) {
@@ -508,9 +514,9 @@ function suaLuongCB() {
           setTimeout(layDuLieu, 500);
           localStorage[`TCA-${nam}`] = JSON.stringify(data);
         }
-      } else alert('Chưa thay đổi lương cơ bản!');
+      }
     } else {
-      alert('Lưu ý:  Lương cơ bản phải là giá trị số và lớn hơn 0');
+      alert('Lưu ý:  Giá trị phải là số và lớn hơn 0');
       suaLuongCB();
     }
   }
@@ -523,11 +529,11 @@ function saoLuuDuLieu() {
     if (check) {
       const backupObj = {
         year: nam,
-        data: data, //JSON.parse(localStorage[`TCA-${nam}`]),
+        data: data,
         coChu: localStorage['TCA-coChu'],
         lcb: localStorage['TCA-lcb'],
-        phanTramTc: phanTramTC, //JSON.parse(localStorage['TCA-phanTramTc']),
-        ngayTrongThang: ngayTrongThang, // localStorage['TCA-ngayTrongThang'],
+        phanTramTc: phanTramTC,
+        ngayTrongThang: ngayTrongThang,
         gtcGanDay: localStorage['TCA-gtcGanDay'],
         loaiTcGanDay: loaiTcGanDay,
         tienCom: localStorage['TCA-tienCom'],
@@ -536,17 +542,18 @@ function saoLuuDuLieu() {
         duLieuCu2: localStorage[`TCA-duLieu${nam-2}`],
         duLieuCu3: localStorage[`TCA-duLieu${nam-3}`],
       };
+
       const file = new Blob([JSON.stringify(backupObj)], { type: 'application/json' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(file);
-      a.download = `TangCa_${nam}.json`;
-      a.click();
+      const a = document.createElement('a'); // Tạo một thẻ A
+      a.href = URL.createObjectURL(file); // Tạo URL cho đối tượng Blob
+      a.download = `TangCa_${nam}.json`; // Tên file tải xuống
+      a.click(); // Gọi phương thức Click để yêu cầu tải xuống
       URL.revokeObjectURL(a.href); // Giải phóng bộ nhớ
     }
   } else alert('Chưa có dữ liệu để sao lưu!');
 }
 
-let fileUpload;
+let fileUpload; // Biến lưu giữ dữ liệu từ file up lên
 $('#inputUpload').addEventListener('change', (e) => {
   fileUpload = e.target.files[0];
 });
@@ -557,10 +564,8 @@ function khoiPhucDuLieu() {
     fr.onload = () => {
       try {
         let restoreObj = JSON.parse(fr.result);
-        // Kiểm tra năm trong tệp khôi phục
-        if (restoreObj.year == nam) {
-          // Khôi phục dữ liệu tăng ca năm nay
-          data = restoreObj.data;
+        if (restoreObj.year == nam) { // Kiểm tra năm trong tệp khôi phục
+          data = restoreObj.data; // Khôi phục dữ liệu tăng ca năm nay
           localStorage[`TCA-${nam}`] = JSON.stringify(restoreObj.data);
           // Khôi phục các dữ liệu khác
           localStorage['TCA-coChu'] = restoreObj.coChu;
@@ -610,8 +615,9 @@ function tinhTien(num) {
   return Intl.NumberFormat().format(Math.floor(num));
 }
 
-//====== Tăng ca v2 ======
-function radioTcClick(value) { loaiTcGanDay = value; }
+function radioTcClick(value) {
+  loaiTcGanDay = value;
+}
 
 function luuCaiDat() {
   const coChu = $('#inputCoChu');
@@ -641,7 +647,7 @@ function luuCaiDat() {
       }
       isChange = true;
     }
-  } else return alert('Giá trị tăng ca ngày không hợp lệ');
+  } else return alert('Giá trị phần trăm tăng ca ngày không hợp lệ!');
 
   if (!isNaN(tcDem.value) && parseFloat(tcDem.value) > 0) {
     if (tcDem.value != phanTramTC.dem) {
@@ -656,20 +662,20 @@ function luuCaiDat() {
       }
       isChange = true;
     }
-  } else return alert('Giá trị tăng ca đêm không hợp lệ');
+  } else return alert('Giá trị phần trăm tăng ca đêm không hợp lệ!');
 
-  if (!isNaN(ngayTrogThag.value)) {
-    if (ngayTrogThag.value != ngayTrongThang) {
-      if (ngayTrogThag.value != null && parseInt(ngayTrogThag.value) > 0) {
-        ngayTrongThang = parseInt(ngayTrogThag.value);
-        localStorage['TCA-ngayTrongThang'] = ngayTrogThag.value;
-      } else {
-        ngayTrongThang = 0;
-        localStorage['TCA-ngayTrongThang'] = '0';
-      }
-      isChange = true;
+  if (ngayTrogThag.value != ngayTrongThang) {
+    if (ngayTrogThag.value == '') {
+      ngayTrongThang = 0;
+      localStorage['TCA-ngayTrongThang'] = '0';
     }
-  } else return alert('Giá trị ngày trong tháng không hợp lệ');
+    else if (parseInt(ngayTrogThag.value) > 0 && parseInt(ngayTrogThag.value) < 32) {
+      ngayTrongThang = parseInt(ngayTrogThag.value);
+      localStorage['TCA-ngayTrongThang'] = ngayTrogThag.value;
+    }
+    else return alert('Giá trị số ngày trong tháng không hợp lệ!');
+    isChange = true;
+  }
 
   if (!isNaN(tienCom.value) && parseInt(tienCom.value) > 0) {
     if (tienCom.value != localStorage['TCA-tienCom']) {
@@ -703,10 +709,18 @@ function luuCaiDat() {
   $('#divCaiDat').style.display = 'none';
 }
 
+/* Tính năng sắp triển khai
+function tinhNangKhac() {
+  const chon = prompt(`•••  TÍNH NĂNG KHÁC  •••\n\n1. Thêm Dữ Liệu Tùy Chọn\n2. Xoá Dữ Liệu Tháng Này`);
+  if (chon != null) {
+    alert(chon);
+  }
+}*/
+
 async function nhatKyPhienBan() {
   const verText = await fetch('version.txt').then(v => v.text());
   setTimeout(() => popUpThongBao(`${phienBan} ${ngayCapNhat}${noiDungCapNhat}\n\n${verText}`), 100);
 }
 
 // Xem thông báo phiên bản khi click vào thẻ p (id: vs)
-$('#version').onclick = () => setTimeout(nhatKyPhienBan, 200);
+$('#version').onclick = () => setTimeout(nhatKyPhienBan, 50);

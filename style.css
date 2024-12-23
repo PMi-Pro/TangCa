@@ -21,11 +21,11 @@ body {
 #divUpload {
   display: none;
   position: fixed;
-  box-shadow: 0 0 10px #555;
+  box-shadow: 0px 0px 10px #555;
   height: 12%;
   top: 38%;
-  left: 12%;
-  right: 12%;
+  left: 10%;
+  right: 10%;
   border-radius: 8px;
   border: 1px solid black;
   padding: 5px;
@@ -34,8 +34,8 @@ body {
 
 .divBar {
   position: sticky;
-  box-shadow: 0 0 10px #555;
-  top: 0;
+  box-shadow: 0px 0px 10px #555;
+  top: 2px;
   padding: 2px;
   background-color: darkcyan;
   border-radius: 5px;
@@ -63,7 +63,7 @@ input {
 
 table {
   width: 100%;
-  box-shadow: 0 0 10px #555;
+  box-shadow: 0px 0px 10px #555;
   margin-bottom: 35px;
   text-align: center;
   border-collapse: collapse;
@@ -71,15 +71,15 @@ table {
 }
 
 th {
-  height: 35px;
+  height: 32px;
   position: sticky;
   top: 48px;
-  background-color: #8cff40;
+  background-color: lawngreen;
   border: 0.5px solid black;
 }
 
 td {
-  height: 30px;
+  height: 28px;
   background-color: lightyellow;
   border: 0.5px solid black;
 }

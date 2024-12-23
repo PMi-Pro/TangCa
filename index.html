@@ -40,9 +40,10 @@
       <option value='saoLuuDuLieu'>Sao Lưu Dữ Liệu</option>
       <option value='khoiPhucDuLieu'>Khôi Phục Dữ Liệu</option>
       <option value="caiDat">Cài Đặt Tăng Ca</option>
+      <option hidden value="tinhNangKhac">Tính Năng Khác</option>
       <option value='chiaSe'>Chia Sẽ Với Bạn Bè</option>
       <option value='nhatKyPhienBan'>Nhật Ký Phiên Bản</option>
-      <option value='thongTin'>Thông Tin</option>
+      <option value='thongTin'>Về Trang Web Này</option>
     </select>
   </div>
 
@@ -56,9 +57,9 @@
     <tbody></tbody>
   </table>
 
-  <div id="divThemDuLieu" style="display: none; position: fixed; box-shadow: 0 0 10px #555; left: 80px; top: 30%; right: 80px; padding: 5px; border-radius: 5px; border: 1px solid black; text-align: center; background-color: floralwhite;">
-    <h4 id="tieuDeThemDuLieu" style="margin: 5px;">THÊM DỮ LIỆU</h4>
-    <h4 id="thuNgay" style="margin: 20px; font-weight: normal;"></h4>
+  <div id="divThemDuLieu" class="showDiv hideDiv" style="display: none; position: fixed; box-shadow: 0px 0px 10px #555; left: 50px; top: 30%; right: 50px; padding: 5px; border-radius: 5px; border: 1px solid black; text-align: center; background-color: floralwhite;">
+    <h4 id="tieuDeThemDuLieu" style="margin: 8px;">THÊM DỮ LIỆU</h4>
+    <h4 id="thuNgay" style="font-weight: normal;"></h4>
     <input id="inputThemDuLieu" type="text" placeholder="1.5 hoặc 3.5 v.v..." value="1.5" style="width: 90%; height: 20px; text-align: center;">
     <br><br>
     <input id="radioTcNgay" type="radio" onclick="radioTcClick(this.value);" value="ngày" name="tc"> <label for="tc" style="margin-right: 15px;">T.Ca ngày</label>
@@ -68,7 +69,7 @@
     <button id='btnThemDuLieu' onclick="btnDivThemDuLieu();" style='width: 62%; height: 35px; border-radius: 5px; border: 0px; color: white; background-color: darkcyan;'>Thêm</button>
   </div>
 
-  <div id="divCaiDat" style="display: none; position: fixed; box-shadow: 0 0 10px #555; left: 80px; top: 16%; right: 80px; padding: 5px; border-radius: 5px; border: 1px solid black; text-align: center; background-color: floralwhite;">
+  <div id="divCaiDat" style="display: none; position: fixed; box-shadow: 0px 0px 10px #555; left: 50px; top: 16%; right: 50px; padding: 5px; border-radius: 5px; border: 1px solid black; text-align: center; background-color: floralwhite;">
     <h4 style="margin: 8px;">CÀI ĐẶT TĂNG CA</h4>
     <lable>Cỡ chữ (10 - 20)</lable><br>
     <input id="inputCoChu" type="number" placeholder="Không để trống" style="width: 90%; height: 18px; margin: 5px;">
@@ -89,7 +90,7 @@
     <button id='btnLuuCaiDat' onclick="luuCaiDat();" style='width: 62%; height: 35px; border-radius: 5px; border: 0px; color: white; background-color: darkcyan;'>Lưu</button>
   </div>
 
-  <div id='divThongBao' style='display: none; position: fixed; padding: 10px; box-shadow: 0 0 10px #555; max-height: 68%; top: 16%; left: 6%; right: 6%; border-radius: 5px; border: 1px solid black; overflow-y: scroll; background-color: aliceblue;'>
+  <div id='divThongBao' style='display: none; position: fixed; padding: 10px; box-shadow: 0px 0px 10px #555; max-height: 68%; top: 16%; left: 5%; right: 5%; border-radius: 5px; border: 1px solid black; overflow-y: scroll; background-color: aliceblue;'>
     <button id='btnThoatThongBao' onclick='document.querySelector("#divThongBao").style.display="none"; document.body.style.overflow="visible";' style='position: fixed; height: 32px; top: 17%; right: 8.2%; border-radius: 5px; border: 0px; color: white; background-color: palevioletred;'>Thoát</button>
     <h4 id='textThongBao' style="font-weight: normal;"></h4>
   </div>
@@ -100,7 +101,7 @@
     <button id='btnKhoiPhuc' onclick='khoiPhucDuLieu()' style='position: absolute; width: 65%; height: 35px; bottom: 5px; right: 5px; border-radius: 5px; border: 0px; color: white; background-color: darkcyan;'>Khôi phục</button>
   </div>
 
-  <button id='btnThem' onclick='setTimeout(themDuLieu, 100);' style='position: fixed; height: 35px; left: 0px; bottom: 0px; right: 0px; text-shadow: black 1px 1px; color: white; border: 1px solid black; background-color: darkcyan;'>Thêm dữ liệu</button>
+  <button id='btnThem' onclick='setTimeout(themDuLieu, 100);' style='position: fixed; height: 32px; left: 0px; bottom: 0px; right: 0px; text-shadow: black 1px 1px; color: white; border: 1px solid black; background-color: darkcyan;'>Thêm dữ liệu</button>
 
   <script src='main.js'></script>
 

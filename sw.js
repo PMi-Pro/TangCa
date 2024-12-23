@@ -12,20 +12,20 @@
 }*/
 
 // Phiên bản bộ đệm
-const version = '1.0.1'; // 20.09.2024
+const version = '1.0.2'; // 24.12.2024
 // Tên bộ đệm
 const cacheName = `TangCa-v${version}`;
 // Danh sách các file cần đưa vào bộ đệm
 const contentToCache = [
-  'bg.jpg',
-  'icon.png',
   'index.html',
   'style.css',
   'main.js',
-  'version.txt'
+  'version.txt',
+  'bg.jpg',
+  'icon.png'
 ];
 
-// Đưa các file dữ liệu vào bộ đệm
+// Đưa các file từ danh sách ở trên vào bộ đệm
 self.addEventListener('install', (e) => {
   //console.log('[Service Worker]: Install!');
   self.skipWaiting();
